@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Saleem Ahmed | crazysal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bio, personal muse of Saleem Ahmed solving problems ubiquitously. One shard at a time." />
+    <meta name="keywords" content="Saleem, Ahmed, crazysal, developer, coder , machine learning, natural language processing, Software engineer" />
+    <meta name="author" content="Saleem Ahmed" <meta name="robots" content="index, follow" />
+    <script src="../../js/lib/jq3.js"></script>
+    <script src="../../js/lib/bs3-3-7.js"></script>
+    <script src="../../js/sidebar.js"></script>
+    <script src="../../js/menubar.js"></script>
+    <link rel="stylesheet" href="../../css/lib/bs3-3-7.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="animated bounceInDown">
+    <!-- navbar-->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header"> <a class="navbar-brand"><i>Scalable Solution Architect</i></a> </div>
+        <ul class="nav navbar-nav">
+          <li><a id="home">Home</a></li>
+          <li><a id="about">About</a></li>
+          <li><a id="resume">Resume</a></li>
+          <li><a id="contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- navbar-->
+    <!-- mainBod -->
+    <div class="mainbod">
+      <div class="content">
+        <div class="col-lg-8 well well-lg">
+          <h1>Hacking <br> <small>mysql concat function</small></h1> <br><br>
+          <div class="date">
+            <div class="bg"> <span class="day">13</span> <span>June</span> <span>2015</span> </div>
+          </div>
+          <div class="entry">
+            <div>
+              <p>In this article I will be sharing my experience of using MySQL concat function for multiple purposes like creating insert queries and curl requests from existing data in MySql tables.</p>
+              <p>But before dwelling into the queries I wrote, let's understand the use of concat function:</p>
+              <p><strong>concat function</strong> is used to concatenate strings in your sql query. </p>
+              <p><code>mysql&gt; select concat('my', 'first', 'query') as firstQuery;</code></p>
+              <p>Output:</p> <pre><code>+----------------+
+| firstQuery     |
++----------------+
+| myfirstquery   |
++----------------+
+1 row in set (0.00 sec)
+</code></pre>
+              <h2 id="concat_ws">concat_ws</h2>
+              <p>Another flavor of concat function is <strong>concat_ws</strong> which stands for <strong>concatenate with separator</strong> and takes a separator character as first argument and inserts the separator between the strings to be concatenated.</p>
+              <p><code>mysql&gt; select concat_ws(' ','Already','feels', 'like', 'a', 'DBA');</code></p>
+              <p>(Using space as separator)</p> <pre><code>+------------------------------------------------------+
+| concat_ws(' ','Already','feels', 'like', 'a', 'DBA')     |
++------------------------------------------------------+
+| Already feels like a DBA                             |
++------------------------------------------------------+
+1 row in set (0.00 sec)
+</code></pre>
+              <h2 id="usingconcatinqueries">Using concat in queries:</h2>
+              <p>This is how one can use concat to concatenate strings with values from mysql rows:</p>
+              <p><code>select concat('Your user id is: ', id) as id from users where user_email = 'concat_me@gmail.com';</code></p>
+              <p>Output:</p> <pre><code>+----------------------+
+| id                   |
++----------------------+
+| Your user id is: 42  |
++----------------------+
+1 row in set (0.10 sec)
+</code></pre>
+              <p>Here id and user_email are columns from the users table. This query shows how column name can be an argument of concat function.</p>
+              <p>Now since you have become a pro and feels like applying for DBA position, let's examine some of the use case for which I used concat function:</p>
+              <h2 id="acreatinginsertqueries">A)Creating insert queries:</h2>
+              <p>When I needed to copy some data from table A to table B:</p>
+              <p><code>select concat('insert into tableB(app_txn_id,order_id) values(', app_txn_id, ',', order_id) from tableA where ts_senttime between "2016-10-20 00:00:00" and "2016-10-20 18:00:00" limti 5;</code></p>
+              <p>This query is straightforward, it takes app_txn_id and order_id from tableA and concat the values into "insert query string".</p>
+              <h2 id="bmakingcurlrequests">B)Making Curl Requests:</h2>
+              <p>Query for creating curl requests, appending column values into query params of the URL.</p>
+              <p><code>select concat('curl -k "https://localhost:4242/v1/order/check?order_id=', order_id, '&amp;status=', status, '"') from sales_order_item where created_at &gt; "2016-10-20 00:00:00";</code></p>
+              <p>These are the small hacks for which I used concat function depending upon the needs.</p>
+            </div>
+            <!-- Social -->
+            <ul class="social-icons">
+              <li><a class="twitter">Twitter</a></li>
+              <li><a class="facebook">Facebook</a></li>
+              <li><a class="instagram">Instagram</a></li>
+            </ul>
+            <p>Want to send me a love letter? <a href="mailto:saleem.ahmed112358@gmail.com">Email me</a>.</p>
+            <!-- Social -->
+          </div>
+        </div>
+        <!-- Sidebar -->
+        <div class="col-lg-2 well well-sm">
+          <div class="sidebar-title"> Nerdy Stuff</div>
+          <hr>
+          <ul class="sidebar-nav" id="sidebar">
+            <li><a id="mysql_concat">Hacking The MySql Concat Function </a> </li>
+            <hr>
+            <li><a id="win32">Win32 Sality: Virus Summary, Prevention & Removal </a> </li>
+            <hr>
+            <li><a id="prog-1">What is Programming ?(Part – I)</a> </li>
+            <hr>
+            <li><a href="content/tech/article1.html">Article 3</a> </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 well well-sm">
+          <div class="sidebar-title">Wisdom</div>
+          <hr>
+          <ul class="sidebar-nav" id="sidebar">
+            <li><a id="koepke">Life Goals by Daniell Koepke</a> </li>
+            <hr>
+            <li><a id="urquico">Who to Date by Rosemarie Urquico</a> </li>
+            <hr>
+            <li><a href="content/gyaan/article1.html">Article 1</a> </li>
+          </ul>
+        </div>
+        <!-- Sidebar -->
+      </div>
+      <!-- mainBod -->
+  </body>
+
+</html>

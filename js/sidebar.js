@@ -10,6 +10,7 @@ $(document).ready(function () {
     //tech
   $("a#win32").attr("href", "https://crazysal.github.io/content/tech/win32_sality.html")
   $("a#prog-1").attr("href", "https://crazysal.github.io/content/tech/prog-intro1.html")
+  $("a#mysql_concat").attr("href", "https://crazysal.github.io/content/tech/mysql_concat.html")
     //Social
   $("a.twitter").attr("href", "https://twitter.com/crazysal").attr("title", "Follow my Tweets")
   $("a.facebook").attr("href", "https://www.facebook.com/Crazy.sal14").attr("title", "Facebook")
