@@ -13,10 +13,12 @@ $(document).ready(function () {
   htmlstring += '<hr>';
   htmlstring += '<li><a id="win32">Win32 Sality: Virus Summary, Prevention & Removal </a> </li>';
   htmlstring += '<hr>';
+  htmlstring += '<li><a id="matlab">Matrix Laboratory (MATLAB) </a> </li>';
+  htmlstring += '<hr>';
   htmlstring += '<li><a id="prog-1">What is Programming ?(Part – I)</a> </li>';
-  htmlstring += '<hr>';/*
-  htmlstring += '<li><a href="content/tech/article1.html">Article 3</a> </li>';
-  htmlstring += '</ul>';*/
+  htmlstring += '<hr>';
+  htmlstring += '<li><a id="prog-2">What is Programming ?(Part – II)</a> </li>';
+  htmlstring += '</ul>';
   htmlstring += '</div>';
   htmlstring += '<div class="col-lg-2 well well-sm">';
   htmlstring += '<div class="sidebar-title">Wisdom</div>';
@@ -40,7 +42,9 @@ $(document).ready(function () {
     //tech
   $("a#win32").attr("href", "https://crazysal.github.io/content/tech/win32_sality.html")
   $("a#prog-1").attr("href", "https://crazysal.github.io/content/tech/prog-intro1.html")
+  $("a#prog-2").attr("href", "https://crazysal.github.io/content/tech/prog2.html")
   $("a#mysql_concat").attr("href", "https://crazysal.github.io/content/tech/mysql_concat.html")
+  $("a#matlab").attr("href", "https://crazysal.github.io/content/tech/matlab.html")
     //Social
   $("a.twitter").attr("href", "https://twitter.com/crazysal").attr("title", "Follow my Tweets")
   $("a.facebook").attr("href", "https://www.facebook.com/Crazy.sal14").attr("title", "Facebook")

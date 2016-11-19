@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Saleem Ahmed | crazysal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bio, personal muse of Saleem Ahmed solving problems ubiquitously. One shard at a time." />
+    <meta name="keywords" content="Saleem, Ahmed, crazysal, developer, coder , machine learning, natural language processing, Software engineer" />
+    <meta name="author" content="Saleem Ahmed" <meta name="robots" content="index, follow" />
+    <script src="../../js/lib/jq3.js"></script>
+    <script src="../../js/lib/bs3-3-7.js"></script>
+    <script src="../../js/sidebar.js"></script>
+    <script src="../../js/menubar.js"></script>
+    <link rel="stylesheet" href="../../css/lib/bs3-3-7.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body class="animated bounceInDown">
+    <!-- navbar-->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header"> <a class="navbar-brand"><i>Scalable Solution Architect</i></a> </div>
+        <ul class="nav navbar-nav">
+          <li><a id="home">Home</a></li>
+          <li><a id="about">About</a></li>
+          <li><a id="resume">Resume</a></li>
+          <li><a id="contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- navbar-->
+    <!-- mainBod -->
+    <div class="mainbod">
+      <div class="content">
+        <div class="col-lg-8 well well-lg">
+          <h1>Hacking <br> <small>mysql concat function</small></h1> <br><br>
+          <div class="date">
+            <div class="bg"> <span class="day">13</span> <span>June</span> <span>2015</span> </div>
+          </div>
+          <div class="entry">
+            <div>
+              <h2>Introduction (What is MATLAB):</h2>
+              <p><strong>Ma</strong>trix <strong>Lab</strong>oratory or MATLAB for short is perhaps the most popular tool used for <strong>computation and data visualization</strong>. The reason for its popularity are more to do with Microsoft monopoly on the software market because of its operating system than it being the best tool out there. But that would be me deviating from the topic.</p>
+              <h2><strong>So first of all what is Computation?</strong></h2>
+              <p>Any type of mathematical modelling especially involving the use of computers to process the data is computation. Now one would say is that not calculation? Well, no. Calculation is just the computation of numbers while computation as a whole involves information processing in general.</p>
+              <p><span id="more-273"></span></p>
+              <p>Matlab is basically a fourth generation programming language that allows <strong>matrix manipulations, plotting of functions and data, implementation of algorithms, creation of user interfaces</strong>, and interfacing with programs written in other languages, including C, C++, Java, Fortran and Python.</p>
+              <p>Any tutorial on the net would start with its downloading and installation but well its already very well documented at their <a href="http://in.mathworks.com/help/matlab/" target="_blank">MATLAB official Documentation</a></p>
+              <p>So plunging ahead and coming directly to the point,</p>
+              <h2>Syntax:</h2>
+              <p>MATLAB has the capability of working on numerical data in the form of matrices and arrays.</p>
+              <p>Language fundamentals include basic operations, such as creating variables, array indexing, arithmetic, and data types.</p>
+              <p>It is a l<strong>oosely typed language</strong>. Meaning there is no need to explicitly define a variable unless there is symbolic reference as an object.</p>
+              <h3>Variables</h3>
+              <p><strong>A simple = is used to assign value to variables:</strong></p>
+              <blockquote class="well well-lg">
+                <p>&gt;&gt; x = 17</p>
+                <p>x =</p>
+                <p>17</p>
+                <hr />
+                <p>x = &#8216;hat&#8217;</p>
+                <p>x =</p>
+                <p>hat</p>
+                <hr />
+                <p>x = [3*4, pi/2]</p>
+                <p>x =</p>
+                <p>12.0000 1.5708</p>
+                <hr />
+                <p>y = 3*sin(x)</p>
+                <p>y =</p>
+                <p>-1.6097 3.0000</p>
+              </blockquote>
+              <h3>Arrays and Matrices</h3>
+              <p><strong>A simple array is defined using the colon syntax: </strong></p>
+              <div>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>init : increment : terminator</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div>
+                <table style="height: 228px;" width="635">
+                  <tbody>
+                    <tr>
+                      <td width="301">
+                        <blockquote class="well well-lg">
+                          <p>&gt;&gt; array = 1:2:9</p>
+                          <p>array =</p>
+                          <p>1 3 5 7 9</p>
+                        </blockquote>
+                      </td>
+                      &nbsp;
+                      <td ><blockquote >array starts at 1 (the <em>init</em> value), increments with each step from the value by 2 (the <em>increment</em> value), and previous stops once it reaches (or to avoid exceeding) 9 (the <em>terminator </em>value)</blockquote></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div>
+                <p><strong>Other features include Array indexing, concatenation, sorting, and reshaping.</strong></p>
+              </div>
+              <div>
+                <h3>Operators and Elementary Operations</h3>
+              </div>
+              <div>
+                <ul>
+                  <li><strong>Arithmetic: </strong>Addition, subtraction, multiplication, division, power, rounding</li>
+                  <li><strong>Relational:</strong> Operations Value comparisons</li>
+                  <li><strong>Logical Operations:</strong> True or false (Boolean) conditions</li>
+                  <li><strong>Set Operations:</strong> Unions, intersection, set membership</li>
+                  <li><strong>Bit-Wise Operations:</strong> Set, shift, or compare specific bit fields</li>
+                </ul>
+              </div>
+              <div>
+                <h3>Data Types</h3>
+              </div>
+              <div>
+                <p>By default, MATLAB<sup>®</sup> stores all numeric variables as double-precision floating-point values. Additional data types store text, integer or single-precision values, or a combination of related data in a single variable. For more information, see <a href="http://in.mathworks.com/help/matlab/matlab_prog/fundamental-matlab-classes.html" target="_blank">Fundamental MATLAB Classes</a> or watch <a href="http://in.mathworks.com/support/2015a/matlab/8.5/demos/introducing-matlab-fundamental-classes-matlab-video.html" target="_blank">Introducing MATLAB Fundamental Classes (Data Types)</a>.</p>
+              </div>
+              <div>
+                <p>&nbsp;</p>
+              </div>
+              <div>
+                <p>As I said earlier this post is not a tutorial for Matlab one can easily find a well defined documentation. Some other basic features include:</p>
+              </div>
+              <div>
+                <h3><a href="http://in.mathworks.com/help/matlab/mathematics.html" target="_blank">Mathematics</a></h3>
+              </div>
+              <div>
+                <p>Linear algebra, basic statistics, differentiation and integrals, Fourier transforms, and other mathematics</p>
+              </div>
+              <div>
+                <h3><a href="http://in.mathworks.com/help/matlab/graphics.html" target="_blank">Graphics</a></h3>
+              </div>
+              <div>
+                <p>Two- and three-dimensional plots, images, animation, visualization</p>
+              </div>
+              <div>
+                <h3><a href="http://in.mathworks.com/help/matlab/programming-and-data-types.html" target="_blank">Programming Scripts and Functions</a></h3>
+              </div>
+              <div>
+                <p>Program files, control flow, editing, debugging</p>
+              </div>
+              <div>
+                <h3><a href="http://in.mathworks.com/help/matlab/data-import-and-export.html" target="_blank">Data Import and Export</a></h3>
+              </div>
+              <div>
+                <p>Text files, spreadsheets, and other file formats; big data; web access</p>
+              </div>
+              <div>
+                <h3><a href="http://in.mathworks.com/help/matlab/gui-development.html" target="_blank">GUI Building</a></h3>
+              </div>
+              <div>
+                <p>Application development using GUIDE and callbacks</p>
+              </div>
+              <div>
+                <h3><a href="http://in.mathworks.com/help/matlab/software-development.html" target="_blank">Advanced Software Development</a></h3>
+              </div>
+              <div>
+                <p>Object-oriented programming; code performance; unit testing; external interfaces to Java , C/C++, .NET and other languages</p>
+              </div>
+              <div>
+                <h3><a href="http://in.mathworks.com/help/matlab/desktop-tools-and-development-environment.html" target="_blank">Desktop Environment</a></h3>
+              </div>
+              <div>
+                <p>Preferences and settings, platform differences</p>
+              </div>
+              <div>
+                <h3><a href="http://in.mathworks.com/help/matlab/supported-hardware.html" target="_blank">Supported Hardware</a></h3>
+              </div>
+              <div>
+                <p>Support for third-party hardware, such as webcam, Raspberry Pi™, and Arduino<sup>®</sup> hardware</p>
+              </div>
+              <div>
+                <p>&nbsp;</p>
+              </div>
+              <div>
+                <p>As a teaching tool, though, it suffers from one major defect: it’s <em>very</em> expensive. And the add-on toolboxes add to its cost.</p>
+                <hr /> </div>
+              <div>
+                <p>There’s therefore the need of a low-cost – preferably open-source – alternative, which can be used by students as a sort of drop-in replacement for experimentation at home, or on their own laptops.</p>
+              </div>
+              <div>
+                <p>My recommendations? Use Octave, unless you have some niche requirements, in which case you may find Scilab more suitable. If you’re prepared to sacrifice maturity for speed, give Julia a go. If your wish is a mature programming language as your base, then Python.</p>
+              </div>
+            </div>
+            <!-- Social -->
+            <ul class="social-icons">
+              <li><a class="twitter">Twitter</a></li>
+              <li><a class="facebook">Facebook</a></li>
+              <li><a class="instagram">Instagram</a></li>
+            </ul>
+            <p>Want to send me a love letter? <a href="mailto:saleem.ahmed112358@gmail.com">Email me</a>.</p>
+            <!-- Social -->
+          </div>
+        </div>
+        <!-- Sidebar -->
+        <div id="sidebar_html"></div>
+        <!-- Sidebar -->
+      </div>
+      <!-- mainBod -->
+  </body>
+
+</html>
+<!DOCTYPE html>
