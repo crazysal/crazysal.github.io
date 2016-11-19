@@ -15,6 +15,8 @@ $(document).ready(function () {
   htmlstring += '<hr>';
   htmlstring += '<li><a id="matlab">Matrix Laboratory (MATLAB) </a> </li>';
   htmlstring += '<hr>';
+  htmlstring += '<li><a id="drchuck">Dr. Chuck\'s Assignment</a> </li>';
+  htmlstring += '<hr>';
   htmlstring += '<li><a id="prog-1">What is Programming ?(Part – I)</a> </li>';
   htmlstring += '<hr>';
   htmlstring += '<li><a id="prog-2">What is Programming ?(Part – II)</a> </li>';
@@ -45,6 +47,7 @@ $(document).ready(function () {
   $("a#prog-2").attr("href", "https://crazysal.github.io/content/tech/prog2.html")
   $("a#mysql_concat").attr("href", "https://crazysal.github.io/content/tech/mysql_concat.html")
   $("a#matlab").attr("href", "https://crazysal.github.io/content/tech/matlab.html")
+  $("a#drchuck").attr("href", "https://crazysal.github.io/content/tech/drchuck.html")
     //Social
   $("a.twitter").attr("href", "https://twitter.com/crazysal").attr("title", "Follow my Tweets")
   $("a.facebook").attr("href", "https://www.facebook.com/Crazy.sal14").attr("title", "Facebook")
