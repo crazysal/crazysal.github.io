@@ -9,6 +9,8 @@ $(document).ready(function () {
   htmlstring += '<div class="sidebar-title"> Nerdy Stuff</div>';
   htmlstring += '<hr>';
   htmlstring += '<ul class="sidebar-nav" id="sidebar">';
+  htmlstring += '<li><a id="cap_theorem">Understanding The Cap Theorem - System Design</a> </li>';
+  htmlstring += '<hr>';
   htmlstring += '<li><a id="mysql_concat">Hacking The MySql Concat Function </a> </li>';
   htmlstring += '<hr>';
   htmlstring += '<li><a id="win32">Win32 Sality: Virus Summary, Prevention & Removal </a> </li>';
@@ -17,9 +19,9 @@ $(document).ready(function () {
   htmlstring += '<hr>';
   htmlstring += '<li><a id="drchuck">Dr. Chuck\'s Assignment</a> </li>';
   htmlstring += '<hr>';
-  htmlstring += '<li><a id="prog-1">What is Programming ?(Part – I)</a> </li>';
+  htmlstring += '<li><a id="prog-1">What is Programming? (Part – I)</a> </li>';
   htmlstring += '<hr>';
-  htmlstring += '<li><a id="prog-2">What is Programming ?(Part – II)</a> </li>';
+  htmlstring += '<li><a id="prog-2">What is Programming? (Part – II)</a> </li>';
   htmlstring += '</ul>';
   htmlstring += '</div>';
   htmlstring += '<div class="col-lg-2 well well-sm">';
@@ -48,6 +50,7 @@ $(document).ready(function () {
   $("a#mysql_concat").attr("href", "https://crazysal.github.io/content/tech/mysql_concat.html")
   $("a#matlab").attr("href", "https://crazysal.github.io/content/tech/matlab.html")
   $("a#drchuck").attr("href", "https://crazysal.github.io/content/tech/drchuck.html")
+  $("a#cap_theorem").attr("href", "https://crazysal.github.io/content/tech/cap_theorem.html")
     //Social
   $("a.twitter").attr("href", "https://twitter.com/crazysal").attr("title", "Follow my Tweets")
   $("a.facebook").attr("href", "https://www.facebook.com/Crazy.sal14").attr("title", "Facebook")
