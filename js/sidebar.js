@@ -28,6 +28,8 @@ $(document).ready(function () {
   htmlstring += '<div class="sidebar-title">Wisdom</div>';
   htmlstring += '<hr>';
   htmlstring += '<ul class="sidebar-nav" id="sidebar">';
+  htmlstring += '<li><a id="wallace">This is Water</a> </li>';
+  htmlstring += '<hr>';
   htmlstring += '<li><a id="koepke">Life Goals by Daniell Koepke</a> </li>';
   htmlstring += '<hr>';
   htmlstring += '<li><a id="urquico">Who to Date by Rosemarie Urquico</a> </li>';
@@ -40,6 +42,7 @@ $(document).ready(function () {
   $("#sidebar_html").empty().append(htmlstring);
   /*Urls*/
   //gyaan
+  $("a#wallace").attr("href", "https://crazysal.github.io/content/gyaan/david_wallace.html")
   $("a#koepke").attr("href", "https://crazysal.github.io/content/gyaan/breathe.html")
   $("a#urquico").attr("href", "https://crazysal.github.io/content/gyaan/girl-who-writes.html")
   $("a#toDo").attr("href", "https://crazysal.github.io/content/gyaan/to_do.html")
