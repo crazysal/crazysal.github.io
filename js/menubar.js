@@ -20,4 +20,7 @@ $(document).ready(function () {
   $("a#resume").attr("href", "https://crazysal.github.io/content/resume/saleem_resume.pdf");
   $("a#resume").attr("target", "_blank");
   $("a#contact").attr("href", "https://crazysal.github.io/contact.html");
+  $("a#LinkedIn").attr("href", "https://www.linkedin.com/in/saleem4/");
+  $("a#stackOver").attr("href", "https://stackoverflow.com/users/2375574/saleem-ahmed");
+  $("a#github").attr("href", "https://github.com/crazysal/repositories");
 });
