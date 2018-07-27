@@ -31,7 +31,7 @@ description: >-
         He is currently on his way of navigating through grad school @UB.
         
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://crazysal.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: crazysal
 github_username:  crazysal
 
@@ -54,5 +54,5 @@ plugins:
 #   - vendor/ruby/
 #
 #
-url: http://salahm.com/
-baseurl: ''
+#url: http://salahm.com/
+#baseurl: ''
