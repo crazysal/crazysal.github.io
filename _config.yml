@@ -37,10 +37,12 @@ github_username:  crazysal
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-hydejack
+theme: jekyll-theme-hacker 
 plugins:
   - jekyll-feed
 
+show_downloads: False  
+google_analytics: "UA-89643543-1"
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
