@@ -5,7 +5,10 @@ layout: default
 <small>{{ page.date | date: "%-d %B %Y" }}</small>
 <h1>{{ page.title }}</h1>
 
-<p class="view">by {{ page.author | default: site.author }}</p>
+<p class="view">by {{ page.author.name | default: site.author.name }}</p>
+<!-- <p class="view"><img width=30% src={{ site.author.picture }}>></p> -->
+<a target="blank" href={{site.author.social.twitter}}><img  src="assets/images/twitter.png"></a> 
+<a target="blank" href={{site.author.social.github}}><img  src="assets/images/blacktocat.png"></a> 
 
 {{content}}
 

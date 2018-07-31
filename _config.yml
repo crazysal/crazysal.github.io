@@ -21,8 +21,8 @@ author:
         email: sahmed9@buffalo.edu
         picture: /oldsite/img/index.jpeg
         social: 
-                twitter: crazysal
-                github: crazysal
+                twitter: https://twitter.com/crazysal
+                github: https://github.com/crazysal
 
 description: >- 
         Saleem Ahmed is an accomplished Computer Vision research scholar. He dabbles in all kinds things computer science. 
@@ -42,7 +42,9 @@ plugins:
   - jekyll-feed
 
 show_downloads: False  
+
 google_analytics: "UA-89643543-1"
+permalink: "/:title"
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
@@ -58,3 +60,5 @@ google_analytics: "UA-89643543-1"
 #
 #url: http://salahm.com/
 #baseurl: ''
+paginate: 2
+paginate_path: "/:num"
