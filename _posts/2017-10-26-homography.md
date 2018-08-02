@@ -6,7 +6,7 @@ tags: [geometry homography computer-vision deep-learning matlab ]
 repository_url : https://github.com/crazysal/homography
 zip_url : https://github.com/crazysal/homography/archive/master.zip
 tar_url : https://github.com/crazysal/homography/archive/master.tar.gz
-pdf_url : https://github.com/crazysal/homography/blob/master/hw3%20(1).pdf
+pdf_url : https://github.com/crazysal/homography/blob/master/hw3/50247637.pdf
 
 ---
  
@@ -120,6 +120,6 @@ pdf_url : https://github.com/crazysal/homography/blob/master/hw3%20(1).pdf
       *(c)* For both image pairs, visualize 3D camera centers and triangulated 3D points.
 
 
-[Project Report PDF](https://github.com/crazysal/homography/blob/master/hw3%20(1).pdf)
+[Results PDF](https://github.com/crazysal/homography/blob/master/hw3/50247637.pdf)
 
 [back](./)
