@@ -1,10 +1,6 @@
----
-layout: default
----
-
 ## Background : Shedding some light on events leading upto Now : 
 
-![Sal]({{ site.author.picture }})
+![Sal](/assets/images/det_index.jpeg)
   
 I am one of those free spirits of this world who is never conformed to boundaries, for INTPers like me&ndash;&ldquo;The Thinkers&rdquo;&ndash; we represent just 3% of the population. 
 
@@ -22,5 +18,4 @@ I was previously employed as a Sofware Engineer @[FAASOS](https://www.faasos.com
 Previously employed as a Full Stack Developer @ [Jugnoo](https://www.jugnoo.in/), providing dynamic web-based solutions for their on demand hyperlocal services.
 
 All things technology hold a strong sense of affinity for me. Developing algorithms from ground up unit mechanics is a favorite pastime. I keep moving   forward as many other AI researchers with the hopes of besting the Turing test one day.
-
-[back](./)
+ 
