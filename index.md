@@ -4,6 +4,6 @@ layout: default
 
 
 [Resume](./resume.html).
-[Blog](./another-page.html).
+[Blog](./blog.html).
 [Background](./background.html).
-[Projects](./another-page.html).
+[Projects](./background.html).

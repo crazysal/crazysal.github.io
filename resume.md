@@ -3,12 +3,10 @@ layout: resume
 ---
 
 
-
-
 [Download Resume](assets/content/resume/saleem_resume.pdf).
-[Blog](./another-page.html).
+[Blog](./blog.html).
 [Background](./background.html).
-[Projects](./another-page.html).
+[Projects](./background.html).
 
 [back](./)
 

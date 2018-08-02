@@ -1,0 +1,16 @@
+---
+layout: post
+---
+ <section id="main_content">
+        {{ content }}
+      </section>
+<div class="container">
+<section>
+            <object data={{page.pdf_url}} type="application/pdf" width="850px" height="700px">
+                <iframe  src="{{page.pdf_url}}"  >
+                <p>This browser does not support PDFs. Please download the PDF to view it: <a href="{{page.pdf_url}}">Download PDF</a>.</p>
+                </iframe>
+            </object>
+        </section>
+      
+    </div>

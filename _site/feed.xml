@@ -1,14 +1,389 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-02T16:30:10-07:00</updated><id>http://localhost:4000/</id><title type="html">Reality is merely an illusion, albeit a very persistent one.</title><subtitle>Saleem Ahmed is an accomplished Computer Vision research scholar. He dabbles in all kinds things computer science.  With an ongoing summer research internship @ Ericsson Research -Santa clara, focusing on recognition and segmentation on multiple video sources, he also brings to the table 3+ years as a professional software engineer. He is currently on his way of navigating through grad school @UB.</subtitle><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><entry><title type="html">Aprils Fools Post</title><link href="http://localhost:4000/aprils-fools-post" rel="alternate" type="text/html" title="Aprils Fools Post" /><published>2015-04-01T00:00:00-07:00</published><updated>2015-04-01T00:00:00-07:00</updated><id>http://localhost:4000/aprils-fools-post</id><content type="html" xml:base="http://localhost:4000/aprils-fools-post">&lt;h2 id=&quot;welcome-to-another-page&quot;&gt;Welcome to another page&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-02T16:30:31-07:00</updated><id>http://localhost:4000/</id><title type="html">Reality is merely an illusion, albeit a very persistent one.</title><subtitle>Saleem Ahmed is an accomplished Computer Vision research scholar. He dabbles in all kinds things computer science.  With an ongoing summer research internship @ Ericsson Research -Santa clara, focusing on recognition and segmentation on multiple video sources, he also brings to the table 3+ years as a professional software engineer. He is currently on his way of navigating through grad school @UB.</subtitle><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><entry><title type="html">A Recurrent Latent Variable Model for Sequential Data</title><link href="http://localhost:4000/variational-rnn" rel="alternate" type="text/html" title="A Recurrent Latent Variable Model for Sequential Data" /><published>2018-04-27T15:16:01-07:00</published><updated>2018-04-27T15:16:01-07:00</updated><id>http://localhost:4000/variational-rnn</id><content type="html" xml:base="http://localhost:4000/variational-rnn">&lt;h3 id=&quot;the-inclusion-of-latent-random-variables-into-the-hidden-state-of-a-recurrent-neural-network-rnn-by-combining-the-elements-of-the-variational-autoencoder-use-of-high-level-latent-random-variables-of-the-variational-rnn-vrnn-to-model-the-kind-of-variability-observed-in-highly-structured-sequential-data-such-as-natural-speech&quot;&gt;The inclusion of latent random variables into the hidden state of a recurrent neural network (RNN) by combining the elements of the variational autoencoder. Use of high-level latent random variables of the variational RNN (VRNN) to model the kind of variability observed in highly structured sequential data such as natural speech.&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Target:&lt;/strong&gt; Learning generative models of sequences.&lt;/p&gt;
+
+&lt;p&gt;**Argument: **Complex dependencies cannot be modelled efficiently by the output probability models used in standard RNNs, which include either a simple unimodal distribution or a mixture of unimodal distributions.&lt;/p&gt;
+
+&lt;p&gt;**Assumptions: **Only concerned with  highly structured data having -&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;relatively high signal-to-noise ratio, variability observed is due to signal not noise.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;underlying factors of variation and the observed data are strongly correlated.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;why-is-the-architecture-so-powerful-and-how-it-is-differentiated-by-other-methods&quot;&gt;&lt;strong&gt;Why&lt;/strong&gt; is the architecture so powerful and how it is differentiated by other methods?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Hypothesis :&lt;/strong&gt; Model variability should induce temporal dependencies across timesteps.&lt;/p&gt;
+
+&lt;p&gt;**Implement : **Like DBN models such as HMMs and Kalman filters, model the dependencies between the latent random variables across timesteps.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Innovation :&lt;/strong&gt; Not the first to propose integrating random variables into the RNN hidden state, the first to integrate the dependencies between the latent random variables at neighboring timesteps. Extend the VAE into a recurrent framework for modelling high-dimensional sequences.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-implementation-is-available-setting-up-the-code-environment&quot;&gt;**What implementation **is available? (Setting up the code environment)&lt;/h2&gt;
+
+&lt;p&gt;Most of the script files are written as pure Theano code, modules are implemented from a more &lt;a href=&quot;https://github.com/jych/cle&quot;&gt;general framework written by original author&lt;/a&gt;, Junyoung Chung.&lt;/p&gt;
+
+&lt;p&gt;Yoshua Bengio announced on Sept. 28, 2017, that&lt;a href=&quot;https://groups.google.com/d/msg/theano-users/7Poq8BZutbY/rNCIfvAEAwAJ&quot;&gt; development on Theano would cease&lt;/a&gt;. &lt;strong&gt;Theano is effectively dead.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Many academic researchers in the field of deep learning rely on&lt;a href=&quot;http://deeplearning.net/software/theano/&quot;&gt; Theano&lt;/a&gt;, the grand-daddy of deep-learning frameworks, which is written in&lt;a href=&quot;https://darkf.github.io/posts/problems-i-have-with-python.html&quot;&gt; Python&lt;/a&gt;. Theano is a library that handles multidimensional arrays, like Numpy. Used with other libs, it is well suited to data exploration and intended for research.&lt;/p&gt;
+
+&lt;p&gt;Numerous open-source deep-libraries have been built on top of Theano, including&lt;a href=&quot;https://github.com/fchollet/keras&quot;&gt; Keras&lt;/a&gt;,&lt;a href=&quot;https://lasagne.readthedocs.org/en/latest/&quot;&gt; Lasagne&lt;/a&gt; and&lt;a href=&quot;https://github.com/mila-udem/blocks&quot;&gt; Blocks&lt;/a&gt;. These libs attempt to layer an easier to use API on top of Theano’s occasionally non-intuitive interface. (As of March 2016, another Theano-related library,&lt;a href=&quot;https://github.com/lisa-lab/pylearn2&quot;&gt; Pylearn2, appears to be dead&lt;/a&gt;.)&lt;/p&gt;
+
+&lt;p&gt;Pros and Cons&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;(+) Python + Numpy&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;(+) Computational graph is nice abstraction&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;(+) RNNs fit nicely in computational graph&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;(-) Raw Theano is somewhat low-level&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;(+) High level wrappers (Keras, Lasagne) ease the pain&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;(-) Error messages can be unhelpful&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;(-) Large models can have long compile times&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;(-) Much “fatter” than Torch&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;(-) Patchy support for pretrained models&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;(-) Buggy on AWS&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;(-) Single GPU&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;what-can-you-improve-your-contribution-to-the-existing-code&quot;&gt;What can you &lt;strong&gt;improve&lt;/strong&gt;? (Your contribution to the existing code.)&lt;/h2&gt;
+
+&lt;p&gt;Possible ideas :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Implementation in an entirely new framework like pytorch/tensorflow which is much more gpu friendly thus allowing for testing on larger more higher dimensional datasets. Like probable chess moves.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The VRNN contains a VAE at every timestep. However, these VAEs are conditioned on the state variable ht − 1 of an RNN. This addition will help the VAE to take into account the temporal structure of the sequential data.  Experimenting with a replay buffer and batch normalizations could probably have a huge impact.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Advantages of experience replay:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;More efficient use of previous experience, by learning with it multiple times. This is key when gaining real-world experience is costly, you can get full use of it. The memory-learning updates are incremental and do not converge quickly, so multiple passes with the same data is beneficial, especially when there is low variance in immediate outcomes (reward, next state) given the same state, action pair.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Better convergence behaviour when training a function approximator. Partly this is because the data is more like&lt;a href=&quot;https://en.wikipedia.org/wiki/Independent_and_identically_distributed_random_variables&quot;&gt; i.i.d.&lt;/a&gt; data assumed in most supervised learning convergence proofs.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Disadvantage of experience replay:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;It is harder to use multi-step learning algorithms, such as Q(λ), which can be tuned to give better learning curves by balancing between bias (due to bootstrapping) and variance (due to delays and randomness in long-term outcomes)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;describe-the-dataset-in-use-can-you-apply-these-methods-to-some-other-dataset&quot;&gt;Describe the &lt;strong&gt;Dataset&lt;/strong&gt; in use. Can you apply these methods to some other dataset?&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Comparison :&lt;/strong&gt; The proposed VRNN model against other RNN-based models – including a VRNNmodel without introducing temporal dependencies between the latent random variables.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tasks :&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Modelling natural speech directly from the raw audio waveforms&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Modelling handwriting generation.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Speech Modelling&lt;/strong&gt; : Directly model raw audio signals, represented as a sequence of 200-dimensional frames. Each frame corresponds to the real-valued amplitudes of 200 consecutive raw acoustic samples. Note that this is unlike the conventional approach for modelling speech, often used in speech synthesis where models are expressed over representations such as spectral features.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Evaluation -&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Blizzard&lt;/strong&gt;: This text-to-speech dataset made available by the Blizzard Challenge 2013 contains 300 hours of English, spoken by a single female speaker.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;TIMIT&lt;/strong&gt;: This widely used dataset for benchmarking speech recognition systems contains 6300 English sentences, read by 630 speakers.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Onomatopoeia2&lt;/strong&gt; : This is a set of 6, 738 non-linguistic human-made sounds such as coughing, screaming, laughing and shouting, recorded from 51 voice actors.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Accent&lt;/strong&gt;: This dataset contains English paragraphs read by 2, 046 different native and nonnative English speakers.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;**Handwriting Modelling : **Each model learn a sequence of (x, y) coordinates together with binary indicators of pen-up/pen-down.&lt;/p&gt;
+
+&lt;p&gt;**Evaluation - **&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;IAM-OnDB:&lt;/strong&gt; dataset which consists of 13040 handwritten lines written by 500 writers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Changes on this project could potentially work on any generic sequential datasets.&lt;/p&gt;
+
+&lt;p&gt;Example :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/edwin-de-jong/mnist-digits-stroke-sequence-data/wiki/MNIST-digits-stroke-sequence-data&quot;&gt;Sequential penstroke data of MNIST&lt;/a&gt; : The MNIST handwritten digit images transformed into a data set for sequence learning. This data set contains pen stroke sequences based on the original MNIST images.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;The most popular benchmarks for sequential data are &lt;a href=&quot;https://catalog.ldc.upenn.edu/ldc99t42&quot;&gt;PTB &lt;/a&gt;and TIMIT, authors used TIMIT but not PTB.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Implementation based on Chung’s &lt;em&gt;A Recurrent Latent Variable Model for Sequential Data&lt;/em&gt; [arXiv:1506.02216v6].&lt;/p&gt;
+
+&lt;h3 id=&quot;1-network-design&quot;&gt;1. Network design&lt;/h3&gt;
+
+&lt;p&gt;There are three types of layers: input (x), hidden(h) and latent(z). We can compare VRNN sided by side with RNN to see how it works in generation phase.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;RNN: $h_o + x_o -&amp;gt; h_1 + x_1 -&amp;gt; h_2 + x_2 -&amp;gt; …$&lt;/li&gt;
+  &lt;li&gt;VRNN: with $ h_o \left{
+\begin{array}{ll}
+    h_o -&amp;gt; z_1 &lt;br /&gt;
+    z_1 + h_o -&amp;gt; x_1&lt;br /&gt;
+    z_1 + x_1 + h_o -&amp;gt; h_1 &lt;br /&gt;
+\end{array} 
+\right .$ 
+with $ h_1 \left{
+\begin{array}{ll}
+    h_1 -&amp;gt; z_2 &lt;br /&gt;
+    z_2 + h_1 -&amp;gt; x_2&lt;br /&gt;
+    z_2 + x_2 + h_1 -&amp;gt; h_2 &lt;br /&gt;
+\end{array} 
+\right .$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It is clearer to see how it works in the code blocks below. This loop is used to generate new text when the network is properly trained. x is wanted output, h is deterministic hidden state, and z is latent state (stochastic hidden state). Both h and z are changing with repect to time.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-training&quot;&gt;2. Training&lt;/h3&gt;
+
+&lt;p&gt;The VRNN above contains three components, a latent layer genreator $h_o -&amp;gt; z_1$, a decoder net to get $x_1$, and a recurrent net to get $h_1$ for the next cycle.&lt;/p&gt;
+
+&lt;p&gt;The training objective is to make sure $x_0$ is realistic. To do that, an encoder layer is added to transform $x_1 + h_0 -&amp;gt; z_1$. Then the decoder should transform $z_1 + h_o -&amp;gt; x_1$ correctly. This implies a cross-entropy loss in the “tiny shakespear” or MSE in image reconstruction.&lt;/p&gt;
+
+&lt;p&gt;Another loose end is  $h_o -&amp;gt; z_1$. Statistically, $x_1 + h_0 -&amp;gt; z_1$ should be the same as $h_o -&amp;gt; z_1$, if $x_1$ is sampled randomly. This constraint is formularize as a KL divergence between the two.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;kl-divergence-of-multivariate-normal-distribution&quot;&gt;KL Divergence of Multivariate Normal Distribution&lt;/h4&gt;
+  &lt;p&gt;&lt;img src=&quot;https://wikimedia.org/api/rest_v1/media/math/render/svg/8dad333d8c5fc46358036ced5ab8e5d22bae708c&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now putting everything together for one training cycle.&lt;/p&gt;
+
+&lt;p&gt;$\left{
+\begin{array}{ll}
+      h_o -&amp;gt; z_{1,prior} &lt;br /&gt;
+      x_1 + h_o -&amp;gt; z_{1,infer}&lt;br /&gt;
+      z_1 &amp;lt;- sampling N(z_{1,infer})&lt;br /&gt;
+      z_1 + h_o -&amp;gt; x_{1,reconstruct}&lt;br /&gt;
+      z_1 + x_1 + h_o -&amp;gt; h_1 &lt;br /&gt;
+\end{array} 
+\right . $
+=&amp;gt;
+$
+\left{
+\begin{array}{ll}
+      loss_latent = DL(z_{1,infer} | z_{1,prior}) &lt;br /&gt;
+      loss_reconstruct = x_1 - x_{1,reconstruct} &lt;br /&gt;
+\end{array} 
+\right .
+$&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Pytorch implementation of the Variational RNN (VRNN), from &lt;em&gt;A Recurrent Latent Variable Model for Sequential Data&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;The paper is available &lt;a href=&quot;https://arxiv.org/abs/1506.02216&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/crazysal/VariationalRNN/raw/master/VariationalRecurrentNeuralNetwork-master/images/fig_1_vrnn.png&quot; alt=&quot;png&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;run&quot;&gt;Run:&lt;/h2&gt;
+
+&lt;p&gt;To train: &lt;code class=&quot;highlighter-rouge&quot;&gt;python train.py&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;To sample with saved model: &lt;code class=&quot;highlighter-rouge&quot;&gt;python sample.py [saves/saved_state_dict_name.pth]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;./&quot;&gt;back&lt;/a&gt;&lt;/p&gt;</content><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><category term="rnn variational autoencoder deep-learning NIPS2015" /><summary type="html">The inclusion of latent random variables into the hidden state of a recurrent neural network (RNN) by combining the elements of the variational autoencoder. Use of high-level latent random variables of the variational RNN (VRNN) to model the kind of variability observed in highly structured sequential data such as natural speech.</summary></entry><entry><title type="html">RANSAC, Homography and Fundamental Matrix Estimation</title><link href="http://localhost:4000/homography" rel="alternate" type="text/html" title="RANSAC, Homography and Fundamental Matrix Estimation" /><published>2018-04-27T15:16:01-07:00</published><updated>2018-04-27T15:16:01-07:00</updated><id>http://localhost:4000/homography</id><content type="html" xml:base="http://localhost:4000/homography">&lt;h3 id=&quot;implementing-a-robust-homography-and-fundamental-matrix-estimation-to-register-pairs-of-images-separated-either-by-a-2d-or-3d-projective-transformation&quot;&gt;Implementing a robust homography and fundamental matrix estimation to register pairs of images separated either by a 2D or 3D projective transformation.&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Stitching pairs of images&lt;/p&gt;
+
+    &lt;p&gt;The first step is to write code to stitch together a single pair of images. For this part, you will be working with the following pair (click on the images to download the high-resolution versions):&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;Load both images, convert to double and to grayscale.&lt;/li&gt;
+      &lt;li&gt;Detect feature points in both images. You can use the Harris corner detector code harris.m that we provide or the blob detector you have developed as part of HW 2.&lt;/li&gt;
+      &lt;li&gt;Extract local neighborhoods around every keypoint in both images, and form descriptors simply by “flattening” the pixel values in each neighborhood to one-dimensional vectors. Experiment with different neighborhood sizes to see which one works the best. If you’re using your Laplacian detector, use the detected feature scales to define the neighborhood scales.&lt;/li&gt;
+      &lt;li&gt;Compute distances between every descriptor in one image and every descriptor in the other image. You can use &lt;code class=&quot;highlighter-rouge&quot;&gt;dist2.m&lt;/code&gt; that we provide for fast computation of Euclidean distance. Alternatively, experiment with computing normalized correlation, or Euclidean distance after normalizing all descriptors to have zero mean and unit standard deviation. Optionally, feel free to experiment with SIFT descriptors.
+  The script find &lt;code class=&quot;highlighter-rouge&quot;&gt;sift.m&lt;/code&gt; that we provide contains some basic code for computing SIFT descriptors of circular regions, such as the ones returned by the detector from HW 2.&lt;/li&gt;
+      &lt;li&gt;Select putative matches based on the matrix of pairwise descriptor distances obtained above. You can select all pairs whose descriptor distances are below a specified threshold, or select the top few hundred descriptor pairs with the smallest pairwise distances.&lt;/li&gt;
+      &lt;li&gt;Run RANSAC to estimate a homography mapping one image onto the other. Report the number of inliers and the average residual for the inliers (squared distance between the point coordinates in one image and the transformed coordinates of the matching point in the other image). Also, display the locations of inlier matches in both images.&lt;/li&gt;
+      &lt;li&gt;Warp one image onto the other using the estimated transformation. To do this, you will need to learn about maketform and imtransform functions.&lt;/li&gt;
+      &lt;li&gt;Create a new image big enough to hold the panorama and composite the two images into it. You can composite by simply averaging the pixel values where the two images overlap. Your result should look something like this (but hopefully with a more precise alignment):&lt;/li&gt;
+      &lt;li&gt;You should create color panoramas by applying the same compositing step to each of the color channels separately (for estimating the transformation, it is sufficient to use grayscale images).&lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;Tips and Details&lt;/p&gt;
+
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;p&gt;For RANSAC, a very simple implementation is sufficient. Use four matches to initialize the homography in each iteration. You should output a single transformation that gets the most inliers in the course of all the iterations. For the various RANSAC parameters (number of iterations, inlier threshold), play around with a few “reasonable” values and pick the ones that work best. Refer to the October 13,2017 lecture for details on RANSAC. For randomly sampling matches, you can use the &lt;code class=&quot;highlighter-rouge&quot;&gt;randperm&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;randsample&lt;/code&gt; functions.&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;p&gt;For details of homography fitting, you should review the October 13, 2017 lecture.&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;p&gt;In MATLAB, the solution to a nonhomogeneous linear least squares system AX=B is given by X = A\B;&lt;/p&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;p&gt;Homography fitting calls for homogeneous least squares. The solution to the homogeneous least squares system AX=0 is obtained from the SVD of A by the singular vector corresponding to the smallest&lt;/p&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Singular Value:&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;[U,S,V]=svd(A); X = V(:,end);&lt;/p&gt;
+
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;&lt;em&gt;For extra credit&lt;/em&gt;&lt;/p&gt;
+
+    &lt;blockquote&gt;
+
+      &lt;ul&gt;
+        &lt;li&gt;Extend your homography estimation to work on multiple images. You can use the data we provide, consisting of three sequences consisting of three images each. For the “pier” sequence, sample output can look as follows (although yours may be different if you choose a different order of transformations):&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;Alternatively, feel free to acquire your own images and stitch them.&lt;/p&gt;
+
+    &lt;blockquote&gt;
+
+      &lt;ul&gt;
+        &lt;li&gt;Experiment with registering very “difficult” image pairs or sequences – for instance, try to find a modern and a historical view of the same location to mimic the kinds of composites found here. Or try to find two views of the same location taken at different times of day, different times of year, etc.
+Another idea is to try to register images with a lot of repetition, or images separated by an extreme
+transformation (large rotation, scaling, etc.). To make stitching work for such challenging situations,
+you may need to experiment with alternative feature detectors and/or descriptors, as well as feature
+space outlier rejection techniques such as Lowe’s ratio test.&lt;/li&gt;
+        &lt;li&gt;Try to implement a more complete version of a system for “Recognizing panoramas” – i.e., a system that can take as input a “pile” of input images (including possible outliers), figure out the subsets that should be stitched together, and then stitch them together. As data for this, either use images you take yourself or combine all the provided input images into one folder (plus, feel free to add outlier images that do not match any of the provided ones).&lt;/li&gt;
+        &lt;li&gt;Implement bundle adjustment or global nonlinear optimization to simultaneously refine transformation parameters between all pairs of images.&lt;/li&gt;
+        &lt;li&gt;Learn about and experiment with image blending techniques and panorama mapping techniques (cylindrical or spherical).&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fundamental Matrix Estimation and Triangulation&lt;/p&gt;
+
+    &lt;p&gt;You will be using these two image pairs: assignment3 part2 data.zip provides the full size images, matching points, camera matrices, and sample code.&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;Load the image pair and matching points file into MATLAB (see sample code in the data file).&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Fit a fundamental matrix to the matching points. Use the sample code provided to visualize the results. Implement both the normalized and the unnormalized algorithms (see October 6, 2017 lecture for the methods). In each case, report your residual, or the mean squared distance in pixels between points in both images and the corresponding epipolar lines.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Now use your putative match generation and RANSAC code from Part 1 to estimate fundamental matrices without groundtruth matches. For this part, only use the normalized algorithm. Report the number of inliers and the average residual for the inliers. In your report, compare the quality of the result with the one you get from ground-truth matches.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Load the camera matrices for the two images (they are stored as 3x4 matrices and can be loaded with the load command, i.e.,&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;div class=&quot;language-matlab highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;P1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'house1 camera.txt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;Find the centers of the two cameras. Use linear least squares to triangulate the position of each matching pair of points given the two cameras (see page 50 and later of the October 2, 2017 lecture for the method). Display the two camera centers and reconstructed points in 3D. Also report the residuals between the observed 2D points and the projected 3D points in the two images.&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;Note: you do not need the camera centers to solve the triangulation problem. They are used just for
+the visualization.&lt;/li&gt;
+      &lt;li&gt;Note 2: it is sufficient to only use the provided ground-truth matches for this part. But if you wish,
+feel free to also generate and compare results with the inlier matches you have found in item 3 above.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;Tips and Details&lt;/p&gt;
+
+      &lt;ul&gt;
+        &lt;li&gt;For fundamental matrix estimation, don’t forget to enforce the rank-2 constraint. This can be done by
+taking the SVD of F, setting the smallest singular value to zero, and recomputing F.&lt;/li&gt;
+        &lt;li&gt;October 6, 2017 lecture shows two slightly different linear least squares setups for estimating the fundamental matrix (one involves a homogeneous system and one involves a non-homogeneous system). You may want to compare the two and determine which one is better in terms of numerics.&lt;/li&gt;
+        &lt;li&gt;Recall that the camera centers are given by the null spaces of the matrices. They can be found by taking the SVD of the camera matrix and taking the last column of V.&lt;/li&gt;
+        &lt;li&gt;For triangulation with linear least squares, it is not necessary to use data normalization (in my implementation, normalization made very little difference for this part).&lt;/li&gt;
+        &lt;li&gt;Plotting in 3D can be done using the plot3 command. Use the axis equal option to avoid automatic nonuniform scaling of the 3D space. To show the structure clearly, you may want to include snapshots from several viewpoints. In the past, some students have also been able to produce animated GIF’s, and those have worked really well.&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h5 id=&quot;grading-checklist&quot;&gt;Grading checklist&lt;/h5&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Homography estimation:&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;(a)&lt;/em&gt; Describe your solution, including any interesting parameters or implementation choices for feature extraction, putative matching, RANSAC, etc.&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;(b)&lt;/em&gt; For the uttower pair provided, report the number of homography inliers and the average residual for the inliers (squared distance between the point coordinates in one image and the transformed coordinates of the matching point in the other image). Also, display the locations of inlier matches in both images.&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;(c)&lt;/em&gt; Display the final result of your stitching.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fundamental matrix estimation:&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;(a)&lt;/em&gt; For both image pairs, for both unnormalized and normalized estimation using ground truth matches, display your result and report your residual.&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;(b)&lt;/em&gt; For both image pairs, for normalized estimation without ground truth matches, display your result and report your number of inliers and residual for inliers.&lt;/p&gt;
+
+    &lt;p&gt;&lt;em&gt;(c)&lt;/em&gt; For both image pairs, visualize 3D camera centers and triangulated 3D points.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/crazysal/homography/blob/master/hw3%20(1).pdf&quot;&gt;Project Report PDF&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;./&quot;&gt;back&lt;/a&gt;&lt;/p&gt;</content><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><category term="geometry homography computer-vision deep-learning matlab" /><summary type="html">Implementing a robust homography and fundamental matrix estimation to register pairs of images separated either by a 2D or 3D projective transformation.</summary></entry><entry><title type="html">Aprils Fools Post</title><link href="http://localhost:4000/aprils-fools-post" rel="alternate" type="text/html" title="Aprils Fools Post" /><published>2015-04-01T00:00:00-07:00</published><updated>2015-04-01T00:00:00-07:00</updated><id>http://localhost:4000/aprils-fools-post</id><content type="html" xml:base="http://localhost:4000/aprils-fools-post">&lt;h2 id=&quot;welcome-to-another-page&quot;&gt;Welcome to another page&lt;/h2&gt;
 
 &lt;p&gt;&lt;em&gt;yay&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;./&quot;&gt;back&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;</content><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><summary type="html">Welcome to another page</summary></entry><entry><title type="html">My Second Post</title><link href="http://localhost:4000/my-second-post" rel="alternate" type="text/html" title="My Second Post" /><published>2015-03-01T00:00:00-08:00</published><updated>2015-03-01T00:00:00-08:00</updated><id>http://localhost:4000/my-second-post</id><content type="html" xml:base="http://localhost:4000/my-second-post">&lt;h2 id=&quot;welcome-to-another-page&quot;&gt;Welcome to another page&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;yay&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;./&quot;&gt;back&lt;/a&gt;&lt;/p&gt;</content><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><summary type="html">Welcome to another page</summary></entry><entry><title type="html">Hello World</title><link href="http://localhost:4000/hello-world" rel="alternate" type="text/html" title="Hello World" /><published>2015-02-01T00:00:00-08:00</published><updated>2015-02-01T00:00:00-08:00</updated><id>http://localhost:4000/hello-world</id><content type="html" xml:base="http://localhost:4000/hello-world">&lt;h2 id=&quot;welcome-to-another-page&quot;&gt;Welcome to another page&lt;/h2&gt;
 
 &lt;p&gt;&lt;em&gt;yay&lt;/em&gt;&lt;/p&gt;
 
