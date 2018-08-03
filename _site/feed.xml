@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-03T14:12:26-07:00</updated><id>http://localhost:4000/</id><title type="html">Reality is merely an illusion, albeit a very persistent one.</title><subtitle>Saleem Ahmed is an accomplished Computer Vision research scholar. He dabbles in all kinds things computer science.  With an ongoing summer research internship @ Ericsson Research -Santa clara, focusing on recognition and segmentation on multiple video sources, he also brings to the table 3+ years as a professional software engineer. He is currently on his way of navigating through grad school @UB.</subtitle><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><entry><title type="html">Benchmark Alpha Zero</title><link href="http://localhost:4000/Alpha-zero-benchmark" rel="alternate" type="text/html" title="Benchmark Alpha Zero" /><published>2018-05-01T15:16:01-07:00</published><updated>2018-05-01T15:16:01-07:00</updated><id>http://localhost:4000/Alpha-zero-benchmark</id><content type="html" xml:base="http://localhost:4000/Alpha-zero-benchmark">&lt;h3 id=&quot;one-experiment-is-simply-to-give-alphazero-an-old-fashioned-examination-on-test-positions-for-which-the-perfect-answers-are-known-these-could-even-be-generated-in-a-controlled-fashion-from-chess-endgames-with-7-or-fewer-pieces-on-the-board-for-which-perfect-play-was-tabulated-by-victor-zakharov-and-vladimir-makhnichev-using-the-lomonosov-supercomputer-of-moscow-state-university-truth-in-those-tables-is-often-incredibly-deepin-some-positions-the-win-takes-over-500-moves-many-of-which-no-current-chess-program-not-equipped-with-the-tables-let-alone-human-player-would-find-or-one-can-set-checkmate-in-n-problems-that-have-stumped-programs-to-varying-degrees&quot;&gt;One experiment is simply to give AlphaZero an old-fashioned examination on test positions for which the perfect answers are known. These could even be generated in a controlled fashion from chess endgames with 7 or fewer pieces on the board, for which perfect play was tabulated by Victor Zakharov and Vladimir Makhnichev using the Lomonosov supercomputer of Moscow State University. Truth in those tables is often incredibly deep—in some positions the win takes over 500 moves, many of which no current chess program (not equipped with the tables) let alone human player would find. Or one can set checkmate-in-{N} problems that have stumped programs to varying degrees.&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-03T14:37:50-07:00</updated><id>http://localhost:4000/</id><title type="html">Reality is merely an illusion, albeit a very persistent one.</title><subtitle>Saleem Ahmed is an accomplished Computer Vision research scholar. He dabbles in all kinds things computer science.  With an ongoing summer research internship @ Ericsson Research -Santa clara, focusing on recognition and segmentation on multiple video sources, he also brings to the table 3+ years as a professional software engineer. He is currently on his way of navigating through grad school @UB.</subtitle><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><entry><title type="html">Benchmark Alpha Zero</title><link href="http://localhost:4000/Alpha-zero-benchmark" rel="alternate" type="text/html" title="Benchmark Alpha Zero" /><published>2018-05-01T15:16:01-07:00</published><updated>2018-05-01T15:16:01-07:00</updated><id>http://localhost:4000/Alpha-zero-benchmark</id><content type="html" xml:base="http://localhost:4000/Alpha-zero-benchmark">&lt;h3 id=&quot;one-experiment-is-simply-to-give-alphazero-an-old-fashioned-examination-on-test-positions-for-which-the-perfect-answers-are-known-these-could-even-be-generated-in-a-controlled-fashion-from-chess-endgames-with-7-or-fewer-pieces-on-the-board-for-which-perfect-play-was-tabulated-by-victor-zakharov-and-vladimir-makhnichev-using-the-lomonosov-supercomputer-of-moscow-state-university-truth-in-those-tables-is-often-incredibly-deepin-some-positions-the-win-takes-over-500-moves-many-of-which-no-current-chess-program-not-equipped-with-the-tables-let-alone-human-player-would-find-or-one-can-set-checkmate-in-n-problems-that-have-stumped-programs-to-varying-degrees&quot;&gt;One experiment is simply to give AlphaZero an old-fashioned examination on test positions for which the perfect answers are known. These could even be generated in a controlled fashion from chess endgames with 7 or fewer pieces on the board, for which perfect play was tabulated by Victor Zakharov and Vladimir Makhnichev using the Lomonosov supercomputer of Moscow State University. Truth in those tables is often incredibly deep—in some positions the win takes over 500 moves, many of which no current chess program (not equipped with the tables) let alone human player would find. Or one can set checkmate-in-{N} problems that have stumped programs to varying degrees.&lt;/h3&gt;
 
 &lt;h1 id=&quot;apha-zero-benchmark&quot;&gt;Apha Zero Benchmark&lt;/h1&gt;
 
@@ -617,7 +617,172 @@ epoch:	145	nll:	8.68066
 epoch:	150	nll:	8.6832
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Note: this code is based on the &lt;a href=&quot;https://github.com/ofirnachum/sequence_gan&quot;&gt;previous work by ofirnachum&lt;/a&gt;. Many thanks to &lt;a href=&quot;https://github.com/ofirnachum&quot;&gt;ofirnachum&lt;/a&gt;.&lt;/p&gt;</content><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><category term="nlp chatbot deep-learning seqGan reinforcement-learning" /><summary type="html">This work tries to reproduce the results of SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient (aka SeqGan). It uses a RNN sequence as a generator and the discriminator Modeling the data generator as a stochastic policy in reinforcement learning (RL),SeqGAN bypasses the generator differentiation problem by directly performing gradient policy update.</summary></entry><entry><title type="html">RANSAC, Homography and Fundamental Matrix Estimation</title><link href="http://localhost:4000/homography" rel="alternate" type="text/html" title="RANSAC, Homography and Fundamental Matrix Estimation" /><published>2017-10-26T15:16:01-07:00</published><updated>2017-10-26T15:16:01-07:00</updated><id>http://localhost:4000/homography</id><content type="html" xml:base="http://localhost:4000/homography">&lt;h3 id=&quot;implementing-a-robust-homography-and-fundamental-matrix-estimation-to-register-pairs-of-images-separated-either-by-a-2d-or-3d-projective-transformation&quot;&gt;Implementing a robust homography and fundamental matrix estimation to register pairs of images separated either by a 2D or 3D projective transformation.&lt;/h3&gt;
+&lt;p&gt;Note: this code is based on the &lt;a href=&quot;https://github.com/ofirnachum/sequence_gan&quot;&gt;previous work by ofirnachum&lt;/a&gt;. Many thanks to &lt;a href=&quot;https://github.com/ofirnachum&quot;&gt;ofirnachum&lt;/a&gt;.&lt;/p&gt;</content><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><category term="nlp chatbot deep-learning seqGan reinforcement-learning" /><summary type="html">This work tries to reproduce the results of SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient (aka SeqGan). It uses a RNN sequence as a generator and the discriminator Modeling the data generator as a stochastic policy in reinforcement learning (RL),SeqGAN bypasses the generator differentiation problem by directly performing gradient policy update.</summary></entry><entry><title type="html">Human Behaviour Prediction - PGM vs ML vs Siamese Lstms</title><link href="http://localhost:4000/meetup" rel="alternate" type="text/html" title="Human Behaviour Prediction - PGM vs ML vs Siamese Lstms " /><published>2018-03-07T14:16:01-08:00</published><updated>2018-03-07T14:16:01-08:00</updated><id>http://localhost:4000/meetup</id><content type="html" xml:base="http://localhost:4000/meetup">&lt;h3 id=&quot;this-work-is-an-nlp-task-comparison-by-simultaneously-solving-the-verification-task-if-a-sample-belongs-to-the-certain-group--using-three-unique-approaches--pgm-methodbayesian-nets-markov-chains-simple-machine-learning-pos-tagging-word2vec-feature-count-etc-a-deep-learning-method-rnn-lstm&quot;&gt;This work is an nlp task comparison by simultaneously solving the verification task (If a sample belongs to the certain group ) using three unique approaches : pgm method(bayesian nets/ markov chains), simple machine learning (pos tagging, word2vec feature count etc), a deep learning method (rnn, lstm)&lt;/h3&gt;
+
+&lt;h1 id=&quot;supervised-classification&quot;&gt;Supervised Classification&lt;/h1&gt;
+&lt;p&gt;Classification is the task of choosing the correct class label for a given input. In basic classification tasks, each input is considered in isolation from all other inputs, and the set of labels is defined in advance. Some examples of classification tasks are:&lt;/p&gt;
+
+&lt;p&gt;Deciding whether an email is spam or not.
+Deciding what the topic of a news article is, from a fixed list of topic areas such as “sports,” “technology,” and “politics.”
+Deciding whether a given occurrence of the word bank is used to refer to a river bank, a financial institution, the act of tilting to the side, or the act of depositing something in a financial institution.
+The basic classification task has a number of interesting variants. For example, in multi-class classification, each instance may be assigned multiple labels; in open-class classification, the set of labels is not defined in advance; and in sequence classification, a list of inputs are jointly classified.&lt;/p&gt;
+
+&lt;p&gt;A classifier is called supervised if it is built based on training corpora containing the correct label for each input. The framework used by supervised classification is shown in 1.1.&lt;/p&gt;
+
+&lt;h5 id=&quot;figure-11-supervised-classification-4&quot;&gt;Figure 1.1: Supervised Classification. [4]&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;http://www.nltk.org/images/supervised-classification.png&quot; alt=&quot;simple-ml-approach&quot; /&gt;&lt;/p&gt;
+&lt;h6 id=&quot;a-during-training-a-feature-extractor-is-used-to-convert-each-input-value-to-a-feature-set-these-feature-sets-which-capture-the-basic-information-about-each-input-that-should-be-used-to-classify-it-are-discussed-in-the-next-section-pairs-of-feature-sets-and-labels-are-fed-into-the-machine-learning-algorithm-to-generate-a-model-b-during-prediction-the-same-feature-extractor-is-used-to-convert-unseen-inputs-to-feature-sets-these-feature-sets-are-then-fed-into-the-model-which-generates-predicted-labels&quot;&gt;(a) During training, a feature extractor is used to convert each input value to a feature set. These feature sets, which capture the basic information about each input that should be used to classify it, are discussed in the next section. Pairs of feature sets and labels are fed into the machine learning algorithm to generate a model. (b) During prediction, the same feature extractor is used to convert unseen inputs to feature sets. These feature sets are then fed into the model, which generates predicted labels.&lt;/h6&gt;
+
+&lt;h1 id=&quot;deep-lstm-siamese-network-for-text-similarity&quot;&gt;Deep LSTM siamese network for text similarity&lt;/h1&gt;
+
+&lt;p&gt;It is a tensorflow based implementation of deep siamese LSTM network to capture phrase/sentence similarity using character embeddings.&lt;/p&gt;
+
+&lt;p&gt;This code provides architecture for learning two kinds of tasks:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Phrase similarity using char level embeddings [1]
+&lt;img src=&quot;https://cloud.githubusercontent.com/assets/9861437/20479454/405a1aea-b004-11e6-8a27-7bb05cf0a002.png&quot; alt=&quot;siamese lstm phrase similarity&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Sentence similarity using word level embeddings [2]
+&lt;img src=&quot;https://cloud.githubusercontent.com/assets/9861437/20479493/6ea8ad12-b004-11e6-89e4-53d4d354d32e.png&quot; alt=&quot;siamese lstm sentence similarity&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For both the tasks mentioned above it uses a multilayer siamese LSTM network and euclidian distance based contrastive loss to learn input pair similairty.&lt;/p&gt;
+
+&lt;h1 id=&quot;capabilities&quot;&gt;Capabilities&lt;/h1&gt;
+&lt;p&gt;Given adequate training pairs, this model can learn Semantic as well as structural similarity. For eg:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Phrases :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;International Business Machines = I.B.M&lt;/li&gt;
+  &lt;li&gt;Synergy Telecom = SynTel&lt;/li&gt;
+  &lt;li&gt;Beam inc = Beam Incorporate&lt;/li&gt;
+  &lt;li&gt;Sir J J Smith = Johnson Smith&lt;/li&gt;
+  &lt;li&gt;Alex, Julia = J Alex&lt;/li&gt;
+  &lt;li&gt;James B. D. Joshi	= James Joshi&lt;/li&gt;
+  &lt;li&gt;James Beaty, Jr. = Beaty&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For phrases, the model learns &lt;strong&gt;character based embeddings&lt;/strong&gt; to identify structural/syntactic similarities.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Sentences :&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;He is smart = He is a wise man.&lt;/li&gt;
+  &lt;li&gt;Someone is travelling countryside = He is travelling to a village.&lt;/li&gt;
+  &lt;li&gt;She is cooking a dessert = Pudding is being cooked.&lt;/li&gt;
+  &lt;li&gt;Microsoft to acquire Linkedin ≠ Linkedin to acquire microsoft&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(More examples Ref: semEval dataset)&lt;/p&gt;
+
+&lt;p&gt;For Sentences, the model uses &lt;strong&gt;pre-trained word embeddings&lt;/strong&gt; to identify semantic similarities.&lt;/p&gt;
+
+&lt;p&gt;Categories of pairs, it can learn as similar:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Annotations&lt;/li&gt;
+  &lt;li&gt;Abbreviations&lt;/li&gt;
+  &lt;li&gt;Extra words&lt;/li&gt;
+  &lt;li&gt;Similar semantics&lt;/li&gt;
+  &lt;li&gt;Typos&lt;/li&gt;
+  &lt;li&gt;Compositions&lt;/li&gt;
+  &lt;li&gt;Summaries&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;training-data&quot;&gt;Training Data&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Phrases:&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;A sample set of learning person name paraphrases have been attached to this repository. To generate full person name disambiguation data follow the steps mentioned at:
+        &lt;blockquote&gt;
+          &lt;p&gt;https://github.com/dhwajraj/dataset-person-name-disambiguation
+  “person_match.train” : https://drive.google.com/open?id=1HnMv7ulfh8yuq9yIrt_IComGEpDrNyo-&lt;/p&gt;
+        &lt;/blockquote&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Sentences:&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;A sample set of learning sentence semantic similarity can be downloaded from:
+  “train_snli.txt” : https://drive.google.com/open?id=1itu7IreU_SyUSdmTWydniGxW-JEGTjrv
+  This data is is in the format of the SNLI project :
+        &lt;blockquote&gt;
+          &lt;p&gt;https://nlp.stanford.edu/projects/snli/&lt;br /&gt;
+Original dataset: Was of the form of separate csv files that were combined to one csv using the sql query provided
+https://www.kaggle.com/sirpunch/meetups-data-from-meetupcom/data&lt;/p&gt;
+        &lt;/blockquote&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;environment&quot;&gt;Environment&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;numpy 1.11.0&lt;/li&gt;
+  &lt;li&gt;tensorflow 1.2.1&lt;/li&gt;
+  &lt;li&gt;gensim 1.0.1&lt;/li&gt;
+  &lt;li&gt;nltk 3.2.2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;how-to-run&quot;&gt;How to run&lt;/h1&gt;
+&lt;h3 id=&quot;training&quot;&gt;Training&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;evaluation&quot;&gt;Evaluation&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;performance&quot;&gt;Performance&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Phrases:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Training time:  = 1 complete epoch : ? (training requires atleast 30 epochs)
+    &lt;ul&gt;
+      &lt;li&gt;Contrastive Loss : ?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Evaluation performance : similarity measure for 100,000 pairs (8core cpu) = ?
+    &lt;ul&gt;
+      &lt;li&gt;Accuracy ?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Sentences:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Training time: (8 core cpu) = 1 complete epoch : ? (training requires atleast 50 epochs)
+    &lt;ul&gt;
+      &lt;li&gt;Contrastive Loss : ?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Evaluation performance : similarity measure for 100,000 pairs (8core cpu) = ?
+    &lt;ul&gt;
+      &lt;li&gt;Accuracy  ?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;references&quot;&gt;References&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.aclweb.org/anthology/W16-16#page=162&quot;&gt;Learning Text Similarity with Siamese Recurrent Networks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.mit.edu/~jonasm/info/MuellerThyagarajan_AAAI16.pdf&quot;&gt;Siamese Recurrent Architectures for Learning Sentence Similarity&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.nltk.org/book/ch06.html&quot;&gt;NLTK Book&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><summary type="html">This work is an nlp task comparison by simultaneously solving the verification task (If a sample belongs to the certain group ) using three unique approaches : pgm method(bayesian nets/ markov chains), simple machine learning (pos tagging, word2vec feature count etc), a deep learning method (rnn, lstm)</summary></entry><entry><title type="html">Logistic Regression - MNIST + USPS Dataset</title><link href="http://localhost:4000/Logistic-Regression" rel="alternate" type="text/html" title="Logistic Regression - MNIST + USPS Dataset " /><published>2017-11-01T15:16:01-07:00</published><updated>2017-11-01T15:16:01-07:00</updated><id>http://localhost:4000/Logistic-Regression</id><content type="html" xml:base="http://localhost:4000/Logistic-Regression">&lt;h3 id=&quot;mnist-logistic-regression-mlp-cnn&quot;&gt;MNIST-Logistic-Regression-MLP-CNN&lt;/h3&gt;
+&lt;h4 id=&quot;logistic-regression-mlp-with-1-hidden-layer-and-cnn-on-both-mnist-and-usps&quot;&gt;Logistic regression, MLP with 1 hidden layer and CNN on both MNIST and USPS&lt;/h4&gt;
+&lt;h3 id=&quot;basic-requirements&quot;&gt;Basic requirements:&lt;/h3&gt;
+&lt;h4 id=&quot;logistic-regression-mlp-with-1-hidden-layer-and-cnn-on-both-mnist-and-usps-using-a-publicly-available-library-such-as-tensorflow--are-required-no-need-to-tune-hyper-parameters-for-cnn-implementation-of-back-propagation-is-not-required-however-implementing-back-propagation-yourself-independently-can-get-you-bonus-points-up-to-an-extra-10-if-you-choose-to-do-this-extra-submit-code-in-another-separate-file-proj3code_bpzip&quot;&gt;Logistic regression, MLP with 1 hidden layer and CNN on both MNIST and USPS using a publicly available library (such as tensorflow, ….) are required. No need to tune hyper parameters for CNN. Implementation of back propagation is not required. However, implementing back propagation yourself independently can get you bonus points (up to an extra 10%). If you choose to do this extra, submit code in another separate file proj3code_bp.zip&lt;/h4&gt;
+
+&lt;h3 id=&quot;bayesian-logistic-regression&quot;&gt;Bayesian logistic regression:&lt;/h3&gt;
+
+&lt;p&gt;Implementing Bayesian logistic regression is not required. If you can implement it independently, you can get a huge bonus (up to an extra 50%, since it has never been implemented before). To earn this bonus, you will&lt;/p&gt;
+
+&lt;p&gt;agree to give a presentation and do a demo in class. If you choose to do this extra, submit code in another separate file proj3code_bayesian.zip.&lt;/p&gt;
+
+&lt;h3 id=&quot;variational-logistic-regression&quot;&gt;Variational logistic regression:&lt;/h3&gt;
+
+&lt;p&gt;Implementing Variational logistic regression is not required. If you can implement it independently, you can get a huge bonus (up to an extra 50%, since it has never been implemented before). To earn this bonus, you will&lt;/p&gt;
+
+&lt;p&gt;agree to give a presentation and do a demo in class. If you choose to do this extra, submit code in another separate file proj3code_variational.zip&lt;/p&gt;</content><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><summary type="html">MNIST-Logistic-Regression-MLP-CNN Logistic regression, MLP with 1 hidden layer and CNN on both MNIST and USPS Basic requirements: Logistic regression, MLP with 1 hidden layer and CNN on both MNIST and USPS using a publicly available library (such as tensorflow, ….) are required. No need to tune hyper parameters for CNN. Implementation of back propagation is not required. However, implementing back propagation yourself independently can get you bonus points (up to an extra 10%). If you choose to do this extra, submit code in another separate file proj3code_bp.zip</summary></entry><entry><title type="html">RANSAC, Homography and Fundamental Matrix Estimation</title><link href="http://localhost:4000/homography" rel="alternate" type="text/html" title="RANSAC, Homography and Fundamental Matrix Estimation" /><published>2017-10-26T15:16:01-07:00</published><updated>2017-10-26T15:16:01-07:00</updated><id>http://localhost:4000/homography</id><content type="html" xml:base="http://localhost:4000/homography">&lt;h3 id=&quot;implementing-a-robust-homography-and-fundamental-matrix-estimation-to-register-pairs-of-images-separated-either-by-a-2d-or-3d-projective-transformation&quot;&gt;Implementing a robust homography and fundamental matrix estimation to register pairs of images separated either by a 2D or 3D projective transformation.&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
