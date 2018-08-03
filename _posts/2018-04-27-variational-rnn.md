@@ -191,4 +191,4 @@ To train: ``` python train.py ```
 
 To sample with saved model: ``` python sample.py [saves/saved_state_dict_name.pth]```
 
-[back](./)
+[back](./blog)

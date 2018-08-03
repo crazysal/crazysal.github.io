@@ -1,7 +1,7 @@
 ---
 layout: pdf
 title:  "RANSAC, Homography and Fundamental Matrix Estimation"
-date:   2018-04-27 16:16:01 -0600
+date:   2017-10-26 16:16:01 -0600
 tags: [geometry homography computer-vision deep-learning matlab ]
 repository_url : https://github.com/crazysal/homography
 zip_url : https://github.com/crazysal/homography/archive/master.zip
@@ -122,4 +122,4 @@ pdf_url : https://github.com/crazysal/homography/blob/master/hw3/50247637.pdf
 
 [Results PDF](https://github.com/crazysal/homography/blob/master/hw3/50247637.pdf)
 
-[back](./)
+[back](./blog)

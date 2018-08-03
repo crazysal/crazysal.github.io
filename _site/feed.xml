@@ -1,4 +1,300 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-02T16:43:09-07:00</updated><id>http://localhost:4000/</id><title type="html">Reality is merely an illusion, albeit a very persistent one.</title><subtitle>Saleem Ahmed is an accomplished Computer Vision research scholar. He dabbles in all kinds things computer science.  With an ongoing summer research internship @ Ericsson Research -Santa clara, focusing on recognition and segmentation on multiple video sources, he also brings to the table 3+ years as a professional software engineer. He is currently on his way of navigating through grad school @UB.</subtitle><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><entry><title type="html">A Recurrent Latent Variable Model for Sequential Data</title><link href="http://localhost:4000/variational-rnn" rel="alternate" type="text/html" title="A Recurrent Latent Variable Model for Sequential Data" /><published>2018-04-27T15:16:01-07:00</published><updated>2018-04-27T15:16:01-07:00</updated><id>http://localhost:4000/variational-rnn</id><content type="html" xml:base="http://localhost:4000/variational-rnn">&lt;h3 id=&quot;the-inclusion-of-latent-random-variables-into-the-hidden-state-of-a-recurrent-neural-network-rnn-by-combining-the-elements-of-the-variational-autoencoder-use-of-high-level-latent-random-variables-of-the-variational-rnn-vrnn-to-model-the-kind-of-variability-observed-in-highly-structured-sequential-data-such-as-natural-speech&quot;&gt;The inclusion of latent random variables into the hidden state of a recurrent neural network (RNN) by combining the elements of the variational autoencoder. Use of high-level latent random variables of the variational RNN (VRNN) to model the kind of variability observed in highly structured sequential data such as natural speech.&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-03T14:12:26-07:00</updated><id>http://localhost:4000/</id><title type="html">Reality is merely an illusion, albeit a very persistent one.</title><subtitle>Saleem Ahmed is an accomplished Computer Vision research scholar. He dabbles in all kinds things computer science.  With an ongoing summer research internship @ Ericsson Research -Santa clara, focusing on recognition and segmentation on multiple video sources, he also brings to the table 3+ years as a professional software engineer. He is currently on his way of navigating through grad school @UB.</subtitle><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><entry><title type="html">Benchmark Alpha Zero</title><link href="http://localhost:4000/Alpha-zero-benchmark" rel="alternate" type="text/html" title="Benchmark Alpha Zero" /><published>2018-05-01T15:16:01-07:00</published><updated>2018-05-01T15:16:01-07:00</updated><id>http://localhost:4000/Alpha-zero-benchmark</id><content type="html" xml:base="http://localhost:4000/Alpha-zero-benchmark">&lt;h3 id=&quot;one-experiment-is-simply-to-give-alphazero-an-old-fashioned-examination-on-test-positions-for-which-the-perfect-answers-are-known-these-could-even-be-generated-in-a-controlled-fashion-from-chess-endgames-with-7-or-fewer-pieces-on-the-board-for-which-perfect-play-was-tabulated-by-victor-zakharov-and-vladimir-makhnichev-using-the-lomonosov-supercomputer-of-moscow-state-university-truth-in-those-tables-is-often-incredibly-deepin-some-positions-the-win-takes-over-500-moves-many-of-which-no-current-chess-program-not-equipped-with-the-tables-let-alone-human-player-would-find-or-one-can-set-checkmate-in-n-problems-that-have-stumped-programs-to-varying-degrees&quot;&gt;One experiment is simply to give AlphaZero an old-fashioned examination on test positions for which the perfect answers are known. These could even be generated in a controlled fashion from chess endgames with 7 or fewer pieces on the board, for which perfect play was tabulated by Victor Zakharov and Vladimir Makhnichev using the Lomonosov supercomputer of Moscow State University. Truth in those tables is often incredibly deep—in some positions the win takes over 500 moves, many of which no current chess program (not equipped with the tables) let alone human player would find. Or one can set checkmate-in-{N} problems that have stumped programs to varying degrees.&lt;/h3&gt;
+
+&lt;h1 id=&quot;apha-zero-benchmark&quot;&gt;Apha Zero Benchmark&lt;/h1&gt;
+
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;One experiment is simply to give AlphaZero an old-fashioned examination on test positions for which the perfect answers are known.&lt;/p&gt;
+
+&lt;p&gt;These could even be generated in a controlled fashion from chess endgames with 7 or fewer pieces on the board, for which perfect play was tabulated by Victor Zakharov and Vladimir Makhnichev using the Lomonosov supercomputer of Moscow State University.&lt;/p&gt;
+
+&lt;h6 id=&quot;truth-in-those-tables-is-often-incredibly-deepin-some-positions-the-win-takes-over-500-moves-many-of-which-no-current-chess-program-not-equipped-with-the-tables-let-alone-human-player-would-find&quot;&gt;Truth in those tables is often incredibly deep—in some positions the win takes over 500 moves, many of which no current chess program (not equipped with the tables) let alone human player would find.&lt;/h6&gt;
+
+&lt;p&gt;Or one can set checkmate-in-{N} problems that have stumped programs to varying degrees.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-candidate-game-&quot;&gt;The Candidate Game :&lt;/h3&gt;
+
+&lt;p&gt;A game playable with chess pawns or checkers on a board with 5 rows and {n} columns, where perhaps {n} can be set to achieve the small-enough/large-enough balance. &lt;a href=&quot;http://www.buffalo.edu/news/experts/ken-regan-faculty-expert-chess.html&quot;&gt;Dr. Regan&lt;/a&gt; conceived this 35 years ago at Oxford when {n=4} seemed right for computers of the day. The starting position is:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://rjlipton.files.wordpress.com/2017/12/4x5grid.jpg&quot; alt=&quot;Starting Position&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;goal-&quot;&gt;Goal :&lt;/h4&gt;
+&lt;p&gt;Make your opponent run out of legal moves.&lt;/p&gt;
+
+&lt;h4 id=&quot;rules-&quot;&gt;Rules :&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Each player’s pawns move one square forward or may “hop” over an opposing piece straight forward or diagonally forward.&lt;/li&gt;
+  &lt;li&gt;If some hop move is legal then the player must make a hop move.&lt;/li&gt;
+  &lt;li&gt;The hopped-over piece remains on the board.&lt;/li&gt;
+  &lt;li&gt;If a pawn reaches the last row it becomes a king and thereupon moves or hops backwards.&lt;/li&gt;
+  &lt;li&gt;No piece is ever captured&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;launching-the-web-app-for-playing-the-gameagent&quot;&gt;Launching the Web App for playing the game/agent&lt;/h2&gt;
+
+&lt;p&gt;We suggest that you begin by typing:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd ./zero_truth/&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm start&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm start&lt;/code&gt;&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;Starts the development server.&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm run build&lt;/code&gt;&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;Bundles the app into static files for production.&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm test&lt;/code&gt;&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;Starts the test runner.&lt;/p&gt;
+    &lt;/blockquote&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm run eject&lt;/code&gt;&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;Removes this tool and copies build dependencies, configuration files
+and scripts into the app directory. If you do this, you can’t go back!&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;referrences-&quot;&gt;Referrences :&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://rjlipton.wordpress.com/2017/12/17/truth-from-zero/&quot;&gt;Truth From Zero&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Happy Hacking !  :boom:  :trollface: :boom:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;./blog&quot;&gt;back&lt;/a&gt;&lt;/p&gt;</content><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><category term="reinforcement-learning actor-critic deep-learning chess p-np" /><summary type="html">One experiment is simply to give AlphaZero an old-fashioned examination on test positions for which the perfect answers are known. These could even be generated in a controlled fashion from chess endgames with 7 or fewer pieces on the board, for which perfect play was tabulated by Victor Zakharov and Vladimir Makhnichev using the Lomonosov supercomputer of Moscow State University. Truth in those tables is often incredibly deep—in some positions the win takes over 500 moves, many of which no current chess program (not equipped with the tables) let alone human player would find. Or one can set checkmate-in-{N} problems that have stumped programs to varying degrees.</summary></entry><entry><title type="html">Sequence to sequence conversation learning : seq2seq RNN</title><link href="http://localhost:4000/seq2seq-rnn" rel="alternate" type="text/html" title="Sequence to sequence conversation learning : seq2seq RNN" /><published>2018-04-30T15:16:01-07:00</published><updated>2018-04-30T15:16:01-07:00</updated><id>http://localhost:4000/seq2seq-rnn</id><content type="html" xml:base="http://localhost:4000/seq2seq-rnn">&lt;h3 id=&quot;this-work-tries-to-reproduce-the-results-of-a-neural-conversational-model-aka-the-google-chatbot-it-uses-a-rnn-seq2seq-model-for-sentence-predictions-it-is-done-using-python-and-tensorflow&quot;&gt;This work tries to reproduce the results of &lt;a href=&quot;http://arxiv.org/abs/1506.05869&quot;&gt;A Neural Conversational Model&lt;/a&gt; (aka the Google chatbot). It uses a RNN (seq2seq model) for sentence predictions. It is done using python and TensorFlow.&lt;/h3&gt;
+
+&lt;p&gt;The loading corpus part of the program is inspired by the Torch &lt;a href=&quot;https://github.com/macournoyer/neuralconvo&quot;&gt;neuralconvo&lt;/a&gt; from &lt;a href=&quot;https://github.com/macournoyer&quot;&gt;macournoyer&lt;/a&gt;.
+For now, DeepQA support the following dialog corpus:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cs.cornell.edu/~cristian/Cornell_Movie-Dialogs_Corpus.html&quot;&gt;Cornell Movie Dialogs&lt;/a&gt; corpus (default). Already included when cloning the repository.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://opus.lingfil.uu.se/OpenSubtitles.php&quot;&gt;OpenSubtitles&lt;/a&gt; (thanks to &lt;a href=&quot;https://github.com/eschnou&quot;&gt;Eschnou&lt;/a&gt;). Much bigger corpus (but also noisier). To use it, follow &lt;a href=&quot;data/opensubs/&quot;&gt;those instructions&lt;/a&gt; and use the flag &lt;code class=&quot;highlighter-rouge&quot;&gt;--corpus opensubs&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Supreme Court Conversation Data (thanks to &lt;a href=&quot;https://github.com/julien-c&quot;&gt;julien-c&lt;/a&gt;). Available using &lt;code class=&quot;highlighter-rouge&quot;&gt;--corpus scotus&lt;/code&gt;. See the &lt;a href=&quot;data/scotus/&quot;&gt;instructions&lt;/a&gt; for installation.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/1506.08909&quot;&gt;Ubuntu Dialogue Corpus&lt;/a&gt; (thanks to &lt;a href=&quot;https://github.com/julien-c&quot;&gt;julien-c&lt;/a&gt;). Available using &lt;code class=&quot;highlighter-rouge&quot;&gt;--corpus ubuntu&lt;/code&gt;. See the &lt;a href=&quot;data/ubuntu/&quot;&gt;instructions&lt;/a&gt; for installation.&lt;/li&gt;
+  &lt;li&gt;Your own data (thanks to &lt;a href=&quot;https://github.com/julien-c&quot;&gt;julien-c&lt;/a&gt;) by using a simple custom conversation format (See &lt;a href=&quot;data/lightweight&quot;&gt;here&lt;/a&gt; for more info).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To speedup the training, it’s also possible to use pre-trained word embeddings (thanks to &lt;a href=&quot;https://github.com/eschnou&quot;&gt;Eschnou&lt;/a&gt;). More info &lt;a href=&quot;data/embeddings&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;The program requires the following dependencies (easy to install using pip: &lt;code class=&quot;highlighter-rouge&quot;&gt;pip3 install -r requirements.txt&lt;/code&gt;):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;python 3.5&lt;/li&gt;
+  &lt;li&gt;tensorflow (tested with v1.0)&lt;/li&gt;
+  &lt;li&gt;numpy&lt;/li&gt;
+  &lt;li&gt;CUDA (for using GPU)&lt;/li&gt;
+  &lt;li&gt;nltk (natural language toolkit for tokenized the sentences)&lt;/li&gt;
+  &lt;li&gt;tqdm (for the nice progression bars)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You might also need to download additional data to make nltk work.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python3 -m nltk.downloader punkt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The Cornell dataset is already included. For the other datasets, look at the readme files into their respective folders (inside &lt;code class=&quot;highlighter-rouge&quot;&gt;data/&lt;/code&gt;).&lt;/p&gt;
+
+&lt;p&gt;The web interface requires some additional packages:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;django (tested with 1.10)&lt;/li&gt;
+  &lt;li&gt;channels&lt;/li&gt;
+  &lt;li&gt;Redis (see &lt;a href=&quot;http://redis.io/topics/quickstart&quot;&gt;here&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;asgi_redis (at least 1.0)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A Docker installation is also available. More detailed instructions &lt;a href=&quot;docker/README.md&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;running&quot;&gt;Running&lt;/h2&gt;
+
+&lt;h3 id=&quot;chatbot&quot;&gt;Chatbot&lt;/h3&gt;
+
+&lt;p&gt;To train the model, simply run &lt;code class=&quot;highlighter-rouge&quot;&gt;main.py&lt;/code&gt;. Once trained, you can test the results with &lt;code class=&quot;highlighter-rouge&quot;&gt;main.py --test&lt;/code&gt; (results generated in ‘save/model/samples_predictions.txt’) or &lt;code class=&quot;highlighter-rouge&quot;&gt;main.py --test interactive&lt;/code&gt; (more fun).&lt;/p&gt;
+
+&lt;p&gt;Here are some flags which could be useful. For more help and options, use &lt;code class=&quot;highlighter-rouge&quot;&gt;python main.py -h&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--modelTag &amp;lt;name&amp;gt;&lt;/code&gt;: allow to give a name to the current model to differentiate between them when testing/training.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--keepAll&lt;/code&gt;: use this flag when training if when testing, you want to see the predictions at different steps (it can be interesting to see the program changes its name and age as the training progress). Warning: It can quickly take a lot of storage space if you don’t increase the &lt;code class=&quot;highlighter-rouge&quot;&gt;--saveEvery&lt;/code&gt; option.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--filterVocab 20&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;--vocabularySize 30000&lt;/code&gt;: Limit the vocabulary size to and optimize the performances and memory usage. Replace the words used less than 20 times by the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;unknown&amp;gt;&lt;/code&gt; token and set a maximum vocabulary size.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--verbose&lt;/code&gt;: when testing, will print the sentences as they are computed.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--playDataset&lt;/code&gt;: show some dialogue samples from the dataset (can be use conjointly with &lt;code class=&quot;highlighter-rouge&quot;&gt;--createDataset&lt;/code&gt; if this is the only action you want to perform).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To visualize the computational graph and the cost with &lt;a href=&quot;https://www.tensorflow.org/how_tos/summaries_and_tensorboard/&quot;&gt;TensorBoard&lt;/a&gt;, just run &lt;code class=&quot;highlighter-rouge&quot;&gt;tensorboard --logdir save/&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;By default, the network architecture is a standard encoder/decoder with two LSTM layers (hidden size of 256) and an embedding size for the vocabulary of 32. The network is trained using ADAM. The maximum sentence length is set to 10 words, but can be increased.&lt;/p&gt;
+
+&lt;h3 id=&quot;web-interface&quot;&gt;Web interface&lt;/h3&gt;
+
+&lt;p&gt;Once trained, it’s possible to chat with it using a more user friendly interface. The server will look at the model copied to &lt;code class=&quot;highlighter-rouge&quot;&gt;save/model-server/model.ckpt&lt;/code&gt;. The first time you want to use it, you’ll need to configure it with:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;CHATBOT_SECRET_KEY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;my-secret-key&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;chatbot_website/
+python manage.py makemigrations
+python manage.py migrate
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then, to launch the server locally, use the following commands:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;chatbot_website/
+redis-server &amp;amp;  &lt;span class=&quot;c&quot;&gt;# Launch Redis in background&lt;/span&gt;
+python manage.py runserver
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;After launch, the interface should be available on &lt;a href=&quot;http://localhost:8000/&quot;&gt;http://localhost:8000/&lt;/a&gt;. If you want to deploy the program on a server, use &lt;code class=&quot;highlighter-rouge&quot;&gt;python manage.py runserver 0.0.0.0&lt;/code&gt; instead. More info &lt;a href=&quot;https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://e-pot.xyz/cv/chatbot.png&quot; alt=&quot;Chatbot web interface&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;results&quot;&gt;Results&lt;/h2&gt;
+
+&lt;p&gt;Surprisingly, it’s possible to get some results after only 1 or 2 hours of training (on a GeForce GT 740M), by drastically reducing the input sequence to 5 words and output to 3 (plus the &lt;code class=&quot;highlighter-rouge&quot;&gt;go&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;eos&lt;/code&gt; tokens) and by using a small embedding size (something like 25). Since then I modified the code and now the output length has to match the input one but you can still reproduce the original results, using &lt;a href=&quot;https://github.com/Conchylicultor/DeepQA/tree/92863e2929580818f866f16969909fe2093d41d1&quot;&gt;this version&lt;/a&gt;.
+Of course, the network won’t be really chatty:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Q: Hi
+A: Hi.
+
+Q: What is your name ?
+A: Laura.
+
+Q: What does that mean ?
+A: I dunno.
+
+Q: How old are you ?
+A: thirty-five.
+
+Q: Will Google hire me ?
+A: No.
+
+Q: Tell me the alphabet
+A: Fuck you.
+
+Q: That's not nice
+A: Yeah.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here is some case where it fails:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Q: Who is Laura ?
+A: My brother.
+
+Q: Say 'goodbye'
+A: Alright.
+
+Q: What is cooking ?
+A: A channel.
+
+Q: Can you say no ?
+A: No.
+
+Q: Two plus two
+A: Manny...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;With longer sentences, the network is much slower to train. After 250000 iterations with maxLength=10, the network still mainly gives evasive answers (by answering most of the open ended questions by ‘I don’t know’) but it seems to have integrated some basic semantic:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Q: When are the fireworks ?
+A: Tomorrow.
+
+Q: What color ?
+A: Gray.
+
+Q: Which apple ?
+A: That's the first one.
+
+Q: What time is it ?
+A: Eleven o'clock.
+
+Q: Who is Skywalker ?
+A: She's a freelance bio-exorcist.
+
+Q: Who is John ?
+A: The old man.
+
+Q: Who is Jenny ?
+A: The man who killed herself.
+
+Q: When were you born ?
+A: Soon.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As shown on the last questions, the network still does some confusion between the genders and the present/future. I also tried some deeper philosophical questions with more or less success.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Q: What is the purpose of being intelligent ?
+A: The man are obsolete.
+
+Q: What is immoral ?
+A: The truth.
+
+Q: What is morality ?
+A: The worst.
+
+Q: What is the purpose of existence ?
+A: It 's private.
+
+Q: What happens if machines can think ?
+A: I think I'll just lie with you.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The model I trained is quite limited by the embedding size I put and by its size, and by the training corpus size. Its ‘thought vector’ is also probably too small to answer the kind of following:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Q: My name is David. What is my name ?
+A: Debbie.
+
+Q: My name is John. What is my name ?
+A: Carl Smith.
+
+Q: How many legs does a cat have ?
+A: Four.
+
+Q: How many legs does a spider have ?
+A: Four.
+
+Q: Do you prefer football or soccer ?
+A: Whiskey.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It also seems to overfit as sometimes it will just pop out sentences from its training set unrelated to the question. Adding some dropout should reduce the issue.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Q: I play tennis. What do I play ?
+A: I'm going to get laid.
+
+Q: What color is the sky ?
+A: One of the deputies is everywhere.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;pretrained-model&quot;&gt;Pretrained model&lt;/h2&gt;
+
+&lt;p&gt;You can find a pre-trained model &lt;a href=&quot;https://drive.google.com/file/d/0Bw-phsNSkq23OXRFTkNqN0JGUU0/view?usp=sharing&quot;&gt;here&lt;/a&gt;, trained of the default corpus. To use it:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Extract the zip file inside &lt;code class=&quot;highlighter-rouge&quot;&gt;DeepQA/save/&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Copy the preprocessed dataset from &lt;code class=&quot;highlighter-rouge&quot;&gt;save/model-pretrainedv2/dataset-cornell-old-lenght10-filter0-vocabSize0.pkl&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;data/samples/&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Run &lt;code class=&quot;highlighter-rouge&quot;&gt;./main.py --modelTag pretrainedv2 --test interactive&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Thanks to Nicholas C., &lt;a href=&quot;https://drive.google.com/drive/folders/0Bw-phsNSkq23c29ZQ2N6X3lyc1U?usp=sharing&quot;&gt;here&lt;/a&gt; (&lt;a href=&quot;https://mcastedu-my.sharepoint.com/personal/nicholas_cutajar_a100636_mcast_edu_mt/_layouts/15/guestaccess.aspx?folderid=077576c4cf9854642a968f67909380f45&amp;amp;authkey=AVt2JWMPkf2R_mWBpI1eAUY&quot;&gt;original&lt;/a&gt;) are some additional pre-trained models (compatible with TF 1.2) for diverse datasets. The folder also contains the pre-processed dataset for Cornell, OpenSubtitles, Ubuntu and Scotus (to move inside &lt;code class=&quot;highlighter-rouge&quot;&gt;data/samples/&lt;/code&gt;). Those are required is you don’t want to process the datasets yourself.&lt;/p&gt;
+
+&lt;p&gt;If you have a high-end GPU, don’t hesitate to play with the hyper-parameters/corpus to train a better model. From my experiments, it seems that the learning rate and dropout rate have the most impact on the results. Also if you want to share your models, don’t hesitate to contact me and I’ll add it here.&lt;/p&gt;
+
+&lt;h2 id=&quot;improvements&quot;&gt;Improvements&lt;/h2&gt;
+
+&lt;p&gt;In addition to trying larger/deeper model, there are a lot of small improvements which could be tested. Don’t hesitate to send a pull request if you implement one of those. Here are some ideas:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For now, the predictions are deterministic (the network just take the most likely output) so when answering a question, the network will always gives the same answer. By adding a sampling mechanism, the network could give more diverse (and maybe more interesting) answers. The easiest way to do that is to sample the next predicted word from the SoftMax probability distribution. By combining that with the &lt;code class=&quot;highlighter-rouge&quot;&gt;loop_function&lt;/code&gt; argument of &lt;code class=&quot;highlighter-rouge&quot;&gt;tf.nn.seq2seq.rnn_decoder&lt;/code&gt;, it shouldn’t be too difficult to add. After that, it should be possible to play with the SoftMax temperature to get more conservative or exotic predictions.&lt;/li&gt;
+  &lt;li&gt;Adding attention could potentially improve the predictions, especially for longer sentences. It should be straightforward by replacing &lt;code class=&quot;highlighter-rouge&quot;&gt;embedding_rnn_seq2seq&lt;/code&gt; by &lt;code class=&quot;highlighter-rouge&quot;&gt;embedding_attention_seq2seq&lt;/code&gt; on &lt;code class=&quot;highlighter-rouge&quot;&gt;model.py&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Having more data usually don’t hurt. Training on a bigger corpus should be beneficial. &lt;a href=&quot;https://www.reddit.com/r/datasets/comments/59039y/updated_reddit_comment_dataset_up_to_201608/&quot;&gt;Reddit comments dataset&lt;/a&gt; seems the biggest for now (and is too big for this program to support it). Another trick to artificially increase the dataset size when creating the corpus could be to split the sentences of each training sample (ex: from the sample &lt;code class=&quot;highlighter-rouge&quot;&gt;Q:Sentence 1. Sentence 2. =&amp;gt; A:Sentence X. Sentence Y.&lt;/code&gt; we could generate 3 new samples: &lt;code class=&quot;highlighter-rouge&quot;&gt;Q:Sentence 1. Sentence 2. =&amp;gt; A:Sentence X.&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;Q:Sentence 2. =&amp;gt; A:Sentence X. Sentence Y.&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;Q:Sentence 2. =&amp;gt; A:Sentence X.&lt;/code&gt;. Warning: other combinations like &lt;code class=&quot;highlighter-rouge&quot;&gt;Q:Sentence 1. =&amp;gt; A:Sentence X.&lt;/code&gt; won’t work because it would break the transition &lt;code class=&quot;highlighter-rouge&quot;&gt;2 =&amp;gt; X&lt;/code&gt; which links the question to the answer)&lt;/li&gt;
+  &lt;li&gt;The testing curve should really be monitored as done in my other &lt;a href=&quot;https://github.com/Conchylicultor/MusicGenerator&quot;&gt;music generation&lt;/a&gt; project. This would greatly help to see the impact of dropout on overfitting. For now it’s just done empirically by manually checking the testing prediction at different training steps.&lt;/li&gt;
+  &lt;li&gt;For now, the questions are independent from each other. To link questions together, a straightforward way would be to feed all previous questions and answer to the encoder before giving the answer. Some caching could be done on the final encoder stated to avoid recomputing it each time. To improve the accuracy, the network should be retrain on entire dialogues instead of just individual QA. Also when feeding the previous dialogue to the encoder, new tokens &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;Q&amp;gt;&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;A&amp;gt;&lt;/code&gt; could be added so the encoder knows when the interlocutor is changing. I’m not sure though that the simple seq2seq model would be sufficient to capture long term dependencies between sentences. Adding a bucket system to group similar input lengths together could greatly improve training speed.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;./blog&quot;&gt;back&lt;/a&gt;&lt;/p&gt;</content><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><category term="nlp chatbot deep-learning seq2seq ICML2015" /><summary type="html">This work tries to reproduce the results of A Neural Conversational Model (aka the Google chatbot). It uses a RNN (seq2seq model) for sentence predictions. It is done using python and TensorFlow.</summary></entry><entry><title type="html">A Recurrent Latent Variable Model for Sequential Data</title><link href="http://localhost:4000/variational-rnn" rel="alternate" type="text/html" title="A Recurrent Latent Variable Model for Sequential Data" /><published>2018-04-27T15:16:01-07:00</published><updated>2018-04-27T15:16:01-07:00</updated><id>http://localhost:4000/variational-rnn</id><content type="html" xml:base="http://localhost:4000/variational-rnn">&lt;h3 id=&quot;the-inclusion-of-latent-random-variables-into-the-hidden-state-of-a-recurrent-neural-network-rnn-by-combining-the-elements-of-the-variational-autoencoder-use-of-high-level-latent-random-variables-of-the-variational-rnn-vrnn-to-model-the-kind-of-variability-observed-in-highly-structured-sequential-data-such-as-natural-speech&quot;&gt;The inclusion of latent random variables into the hidden state of a recurrent neural network (RNN) by combining the elements of the variational autoencoder. Use of high-level latent random variables of the variational RNN (VRNN) to model the kind of variability observed in highly structured sequential data such as natural speech.&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Target:&lt;/strong&gt; Learning generative models of sequences.&lt;/p&gt;
 
@@ -233,7 +529,95 @@ $&lt;/p&gt;
 
 &lt;p&gt;To sample with saved model: &lt;code class=&quot;highlighter-rouge&quot;&gt;python sample.py [saves/saved_state_dict_name.pth]&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;./&quot;&gt;back&lt;/a&gt;&lt;/p&gt;</content><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><category term="rnn variational autoencoder deep-learning NIPS2015" /><summary type="html">The inclusion of latent random variables into the hidden state of a recurrent neural network (RNN) by combining the elements of the variational autoencoder. Use of high-level latent random variables of the variational RNN (VRNN) to model the kind of variability observed in highly structured sequential data such as natural speech.</summary></entry><entry><title type="html">RANSAC, Homography and Fundamental Matrix Estimation</title><link href="http://localhost:4000/homography" rel="alternate" type="text/html" title="RANSAC, Homography and Fundamental Matrix Estimation" /><published>2018-04-27T15:16:01-07:00</published><updated>2018-04-27T15:16:01-07:00</updated><id>http://localhost:4000/homography</id><content type="html" xml:base="http://localhost:4000/homography">&lt;h3 id=&quot;implementing-a-robust-homography-and-fundamental-matrix-estimation-to-register-pairs-of-images-separated-either-by-a-2d-or-3d-projective-transformation&quot;&gt;Implementing a robust homography and fundamental matrix estimation to register pairs of images separated either by a 2D or 3D projective transformation.&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;./blog&quot;&gt;back&lt;/a&gt;&lt;/p&gt;</content><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><category term="rnn variational autoencoder deep-learning NIPS2015" /><summary type="html">The inclusion of latent random variables into the hidden state of a recurrent neural network (RNN) by combining the elements of the variational autoencoder. Use of high-level latent random variables of the variational RNN (VRNN) to model the kind of variability observed in highly structured sequential data such as natural speech.</summary></entry><entry><title type="html">Sequence Generative Adversarial Nets with Policy Gradient : SeqGAN</title><link href="http://localhost:4000/seq-GAN" rel="alternate" type="text/html" title="Sequence Generative Adversarial Nets with Policy Gradient : SeqGAN " /><published>2018-04-03T15:16:01-07:00</published><updated>2018-04-03T15:16:01-07:00</updated><id>http://localhost:4000/seq-GAN</id><content type="html" xml:base="http://localhost:4000/seq-GAN">&lt;h3 id=&quot;this-work-tries-to-reproduce-the-results-of--seqgan-sequence-generative-adversarial-nets-with-policy-gradient-aka-seqgan-it-uses-a-rnn-sequence-as-a-generator-and-the-discriminator--modeling-the-data-generator-as-a-stochastic-policy-in-reinforcement-learning-rlseqgan-bypasses-the-generator-differentiation-problem-by-directly-performing-gradient--policy--update&quot;&gt;This work tries to reproduce the results of  &lt;a href=&quot;http://arxiv.org/abs/1609.05473&quot;&gt;SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient&lt;/a&gt; (aka SeqGan). It uses a RNN sequence as a generator and the discriminator  Modeling the data generator as a stochastic policy in reinforcement learning (RL),SeqGAN bypasses the generator differentiation problem by directly performing gradient  policy  update.&lt;/h3&gt;
+
+&lt;h1 id=&quot;seqgan&quot;&gt;SeqGAN&lt;/h1&gt;
+
+&lt;h2 id=&quot;requirements&quot;&gt;Requirements:&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Tensorflow r1.0.1&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Python 2.7&lt;/li&gt;
+  &lt;li&gt;CUDA 7.5+ (For GPU)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;Apply Generative Adversarial Nets to generating sequences of discrete tokens.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/LantaoYu/SeqGAN/master/figures/seqgan.png&quot; alt=&quot;seqGan&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The illustration of SeqGAN. Left: D is trained over the real data and the generated data by G. Right: G is trained by policy gradient where the final reward signal is provided by D and is passed back to the intermediate action value via Monte Carlo search.&lt;/p&gt;
+
+&lt;p&gt;The research paper &lt;a href=&quot;http://arxiv.org/abs/1609.05473&quot;&gt;SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient&lt;/a&gt; has been accepted at the Thirty-First AAAI Conference on Artificial Intelligence (AAAI-17).&lt;/p&gt;
+
+&lt;p&gt;We provide example codes to repeat the synthetic data experiments with oracle evaluation mechanisms.
+To run the experiment with default parameters:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ python sequence_gan.py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;You can change the all the parameters in &lt;code class=&quot;highlighter-rouge&quot;&gt;sequence_gan.py&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;The experiment has two stages. In the first stage, use the positive data provided by the oracle model and Maximum Likelihood Estimation to perform supervise learning. In the second stage, use adversarial training to improve the generator.&lt;/p&gt;
+
+&lt;p&gt;After running the experiments, you could get the negative log-likelihodd performance saved in &lt;code class=&quot;highlighter-rouge&quot;&gt;save/experiment-log.txt&lt;/code&gt; like:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pre-training...
+epoch:	0	nll:	10.1716
+epoch:	5	nll:	9.42939
+epoch:	10	nll:	9.2388
+epoch:	15	nll:	9.11899
+epoch:	20	nll:	9.13099
+epoch:	25	nll:	9.14474
+epoch:	30	nll:	9.12539
+epoch:	35	nll:	9.13982
+epoch:	40	nll:	9.135
+epoch:	45	nll:	9.13081
+epoch:	50	nll:	9.10678
+epoch:	55	nll:	9.10694
+epoch:	60	nll:	9.10349
+epoch:	65	nll:	9.10403
+epoch:	70	nll:	9.07613
+epoch:	75	nll:	9.091
+epoch:	80	nll:	9.08909
+epoch:	85	nll:	9.0807
+epoch:	90	nll:	9.08434
+epoch:	95	nll:	9.08936
+epoch:	100	nll:	9.07443
+epoch:	105	nll:	9.08305
+epoch:	110	nll:	9.06973
+epoch:	115	nll:	9.07058
+adversarial training...
+epoch:	0	nll:	9.08457
+epoch:	5	nll:	9.04511
+epoch:	10	nll:	9.03079
+epoch:	15	nll:	8.99239
+epoch:	20	nll:	8.96401
+epoch:	25	nll:	8.93864
+epoch:	30	nll:	8.91642
+epoch:	35	nll:	8.87761
+epoch:	40	nll:	8.88582
+epoch:	45	nll:	8.8592
+epoch:	50	nll:	8.83388
+epoch:	55	nll:	8.81342
+epoch:	60	nll:	8.80247
+epoch:	65	nll:	8.77778
+epoch:	70	nll:	8.7567
+epoch:	75	nll:	8.73002
+epoch:	80	nll:	8.72488
+epoch:	85	nll:	8.72233
+epoch:	90	nll:	8.71473
+epoch:	95	nll:	8.71163
+epoch:	100	nll:	8.70113
+epoch:	105	nll:	8.69879
+epoch:	110	nll:	8.69208
+epoch:	115	nll:	8.69291
+epoch:	120	nll:	8.68371
+epoch:	125	nll:	8.689
+epoch:	130	nll:	8.68989
+epoch:	135	nll:	8.68269
+epoch:	140	nll:	8.68647
+epoch:	145	nll:	8.68066
+epoch:	150	nll:	8.6832
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Note: this code is based on the &lt;a href=&quot;https://github.com/ofirnachum/sequence_gan&quot;&gt;previous work by ofirnachum&lt;/a&gt;. Many thanks to &lt;a href=&quot;https://github.com/ofirnachum&quot;&gt;ofirnachum&lt;/a&gt;.&lt;/p&gt;</content><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><category term="nlp chatbot deep-learning seqGan reinforcement-learning" /><summary type="html">This work tries to reproduce the results of SeqGAN: Sequence Generative Adversarial Nets with Policy Gradient (aka SeqGan). It uses a RNN sequence as a generator and the discriminator Modeling the data generator as a stochastic policy in reinforcement learning (RL),SeqGAN bypasses the generator differentiation problem by directly performing gradient policy update.</summary></entry><entry><title type="html">RANSAC, Homography and Fundamental Matrix Estimation</title><link href="http://localhost:4000/homography" rel="alternate" type="text/html" title="RANSAC, Homography and Fundamental Matrix Estimation" /><published>2017-10-26T15:16:01-07:00</published><updated>2017-10-26T15:16:01-07:00</updated><id>http://localhost:4000/homography</id><content type="html" xml:base="http://localhost:4000/homography">&lt;h3 id=&quot;implementing-a-robust-homography-and-fundamental-matrix-estimation-to-register-pairs-of-images-separated-either-by-a-2d-or-3d-projective-transformation&quot;&gt;Implementing a robust homography and fundamental matrix estimation to register pairs of images separated either by a 2D or 3D projective transformation.&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -377,4 +761,147 @@ taking the SVD of F, setting the smallest singular value to zero, and recomputin
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/crazysal/homography/blob/master/hw3/50247637.pdf&quot;&gt;Results PDF&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;./&quot;&gt;back&lt;/a&gt;&lt;/p&gt;</content><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><category term="geometry homography computer-vision deep-learning matlab" /><summary type="html">Implementing a robust homography and fundamental matrix estimation to register pairs of images separated either by a 2D or 3D projective transformation.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;./blog&quot;&gt;back&lt;/a&gt;&lt;/p&gt;</content><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><category term="geometry homography computer-vision deep-learning matlab" /><summary type="html">Implementing a robust homography and fundamental matrix estimation to register pairs of images separated either by a 2D or 3D projective transformation.</summary></entry><entry><title type="html">Application of a Laplacian Blob Detector</title><link href="http://localhost:4000/scale-space-blob-detector" rel="alternate" type="text/html" title="Application of a Laplacian Blob Detector" /><published>2017-10-02T15:16:01-07:00</published><updated>2017-10-02T15:16:01-07:00</updated><id>http://localhost:4000/scale-space-blob-detector</id><content type="html" xml:base="http://localhost:4000/scale-space-blob-detector">&lt;h3 id=&quot;the-goal-of-the-assignment-is-to-implement-a-laplacian-blob-detector--a-generalized-laplacian-of-gaussian-log-glog-filter-for-detecting-general-elliptical-blob-structures-in-images-the-glog-filter-can-not-only-accurately-locate-the-blob-centers-but-also-estimate-the-scales-shapes-and-orientations-of-the-detected-blobs-these-functions-can-be-realized-by-generalizing-the-common-3-d-log-scale-space-blob-detector-to-a-5-d-glog-scale-space-one-where-the-five-parameters-are-image-domain-coordinates-x-y-scales-σ-x--σ-y--and-orientation-θ-respectively&quot;&gt;The goal of the assignment is to implement a Laplacian blob detector:  a generalized Laplacian of Gaussian (LoG) (gLoG) filter for detecting general elliptical blob structures in images. The gLoG filter can not only accurately locate the blob centers but also estimate the scales, shapes, and orientations of the detected blobs. These functions can be realized by generalizing the common 3-D LoG scale-space blob detector to a 5-D gLoG scale-space one, where the five parameters are image-domain coordinates (x, y), scales (σ x , σ y ), and orientation (θ), respectively.&lt;/h3&gt;
+
+&lt;h4 id=&quot;algorithm-outline&quot;&gt;Algorithm outline&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Generate a Laplacian of Gaussian filter.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Build a Laplacian scale space, starting with some initial scale and going for n iterations:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Filter image with scale-normalized Laplacian at current scale.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Save square of Laplacian response for current level of scale space.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Increase scale by a factor k.&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Perform nonmaximum suppression in scale space.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Display resulting circles at their characteristic scales.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;test-images&quot;&gt;Test images&lt;/h4&gt;
+
+&lt;p&gt;In the data directory of hw2.zip, there are four images to test your code, and sample output images for your reference. Keep in mind, though, that your output may look different depending on your threshold, range of scales, and other implementation details. In addition to the images provided, also run your code on at least four images of your own choosing.&lt;/p&gt;
+
+&lt;p&gt;∗ Credit to Svetlana Lazebnik for this assignment.&lt;/p&gt;
+
+&lt;p&gt;1.&lt;/p&gt;
+
+&lt;h4 id=&quot;detailed-instructions&quot;&gt;Detailed instructions&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Don’t forget to convert images to grayscale (rgb2gray command) and double (im2double).&lt;/li&gt;
+  &lt;li&gt;For creating the Laplacian filter, use the fspecial function (check the options). Pay careful attention to setting the right filter mask size. Hint: Should the filter width be odd or even?&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;It is relatively inefficient to repeatedly filter the image with a kernel of increasing size. Instead of increasing the kernel size by a factor of k, you should downsample the image by a factor 1/k. In that case, you will have to upsample the result or do some interpolation in order to find maxima in scale space. For full credit, you should turn in both implementations: one that increases filter size, and one that downsamples the image. In your report, list the running times for both versions of the algorithm and discuss differences (if any) in the detector output. For timing, use tic and toc commands.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Hint 1: Think about whether you still need scale normalization when you downsample the image instead of increasing the scale of the filter.&lt;/li&gt;
+  &lt;li&gt;Hint 2: For the efficient implementation, pay attention to the interpolation method you’re using to upsample the filtered images (see the options of the imresize function). What kind of interpolation works best?&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;You have to choose the initial scale, the factor k by which the scale is multiplied each time, and the number of levels in the scale space. The initial scale is typically set to 2, and use 10 to 15 levels in the scale pyramid. The multiplication factor should depend on the largest scale at which you want regions to be detected.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;You may want to use a three-dimensional array to represent your scale space. It would be declared as follows:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-matlab highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;c1&quot;&gt;% h,w - dimensions of image,&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;% n - number of levels in scale space&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;scale_space&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;zeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Then scale space&lt;code class=&quot;highlighter-rouge&quot;&gt;(:,:,i)&lt;/code&gt; would give you the ith level of the scale space. Alternatively, if you are storing different levels of the scale pyramid at different resolutions, you may want to use a cell array, where each “slot” “slot” can accommodate a different data type or a matrix of different dimensions.
+Here is how you would use it:
+&lt;code class=&quot;highlighter-rouge&quot;&gt;scale_space = cell(n,1); %creates a cell array with n ''slots''&lt;/code&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;scale_space{i} = my_matrix; % store a matrix at level i&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;To perform nonmaximum suppression in scale space, you should first do nonmaximum suppression in each 2D slice separately. For this, you may find functions nlfilter, colfilt or ordfilt2 useful.
+Play around with these functions, and try to find the one that works the fastest. To extract the final nonzero values (corresponding to detected regions), you may want to use the find function.&lt;/li&gt;
+  &lt;li&gt;You also have to set a threshold on the squared Laplacian response above which to report region detections. You should play around with different values and choose one you like best.&lt;/li&gt;
+  &lt;li&gt;To display the detected regions as circles, you can use the function show all circles in the code directory of hw2.zip (or feel free to search for a suitable MATLAB function or write your own).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Hint: Don’t forget that there is a multiplication factor that relates the scale at which a region is detected to the radius of the circle that most closely “approximates” the region.&lt;/p&gt;
+
+&lt;p&gt;2.&lt;/p&gt;
+
+&lt;h4 id=&quot;for-extra-credit&quot;&gt;For extra credit&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Implement the difference-of-Gaussian pyramid as mentioned in class and described in David Lowe’s paper[3]. Compare the results and the running time to the direct Laplacian implementation.&lt;/li&gt;
+  &lt;li&gt;Implement the affine adaptation[4] step to turn circular blobs into ellipses as shown in class (just one iteration is sufficient). The selection of the correct window function is essential here. 
+You should use a Gaussian window that is a factor of 1.5 or 2 larger than the characteristic scale of the blob.
+Note that the lecture slides show how to find the relative shape of the second moment ellipse, but not the absolute scale (i.e., the axis lengths are defined up to some arbitrary constant multiplier). 
+A good choice for the absolute scale is to set the sum of the major and minor axis half-lengths to the diameter of the corresponding Laplacian circle. To display the resulting ellipses, you should modify my circle-drawing function or look for a better function in the MATLAB documentation or on the Internet.&lt;/li&gt;
+  &lt;li&gt;The Laplacian has a strong response not only at blobs, but also along edges. However, recall from the class lecture that edge points are not “repeatable”. So, implement an additional thresholding step that computes the Harris response[1] at each detected Laplacian region and rejects the regions that have only one dominant gradient orientation (i.e., regions along edges). If you have implemented the affine adaptation step, these would be the regions whose characteristic ellipses are close to being degenerate (i.e., one of the eigenvalues is close to zero). Show both “before” and “after” detection results.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;helpful-resources&quot;&gt;Helpful resources&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Sample Harris detector code is provided as function harris in the code directory of hw2.zip.&lt;/li&gt;
+  &lt;li&gt;Blob detection on Wikipedia.&lt;/li&gt;
+  &lt;li&gt;David G Lowe. Distinctive image features from scale-invariant keypoints. International Journal of Computer Vision, 60(2):91–110, 2004. This paper contains details about efficient implementation of a Difference-of-Gaussians scale space.&lt;/li&gt;
+  &lt;li&gt;Tony Lindeberg. Feature detection with automatic scale selection. International Journal of Computer Vision, 30(2):79–116, 1998. This is advanced reading for those of you who are really interested in the gory mathematical details.&lt;/li&gt;
+  &lt;li&gt;Krystian Mikolajczyk and Cordelia Schmid. Scale &amp;amp; affine invariant interest point detectors. International Journal of Computer Vision, 60(1):63–86, 2004. This paper provides the details of affine adaption for the second extra credit option.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;grading-checklist&quot;&gt;Grading Checklist&lt;/h4&gt;
+
+&lt;p&gt;You must turn in both your report and your code. Your report will be graded based on the following items:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The output of your circle detector on all the images (four provided and four of your own choice), together with a comparison of running times for both the “efficient” and the “inefficient” implementation. (The comparison is graded, not the running times.)&lt;/li&gt;
+  &lt;li&gt;An explanation of any “interesting” implementation choices that you made.&lt;/li&gt;
+  &lt;li&gt;An explanation of parameter values you have tried and which ones you found to be optimal.&lt;/li&gt;
+  &lt;li&gt;Discussion and results of any extensions or bonus features you have implemented.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;3.&lt;/p&gt;
+
+&lt;h4 id=&quot;instructions-for-submitting-the-assignment&quot;&gt;Instructions for Submitting the Assignment&lt;/h4&gt;
+
+&lt;p&gt;Your submission should consist of the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;All your MATLAB code and output images in a single zip file with subdirectories matlab and output. The filename should be yourPersonNUmber hw2.zip.&lt;/li&gt;
+  &lt;li&gt;A brief report in a single PDF file with all your results and discussion. The filename should be yourPersonNUmber hw2.pdf.&lt;/li&gt;
+  &lt;li&gt;The files will be submitted through UBlearns.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Multiple attempts will be allowed but by default, only your last submission will be graded. We reserve the right to take off points for not following directions.&lt;/p&gt;
+
+&lt;p&gt;Late policy: You lose 50% of the points for every day the assignment is late. (Any genuine emergency situations will be handled on an individual basis.) Academic integrity: Feel free to discuss the assignment with each other in general terms, and to search the Web for general guidance (not for complete solutions). Coding should be done individually. If you make substantial use of some code snippets or information from outside sources, be sure to acknowledge the sources in your report.&lt;/p&gt;
+
+&lt;h4 id=&quot;references&quot;&gt;References&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Chris Harris and Mike Stephens. A combined corner and edge detector. In Alvey Vision Conference, volume 15, pages 10–5244. Manchester, UK, 1988.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Tony Lindeberg. Feature detection with automatic scale selection. International Journal of Computer Vision, 30(2):79–116, 1998.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;David G Lowe. Distinctive image features from scale-invariant keypoints. International Journal of Computer Vision, 60(2):91–110, 2004.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Krystian Mikolajczyk and Cordelia Schmid. Scale &amp;amp; affine invariant interest point detectors. International Journal of Computer Vision, 60(1):63–86, 2004&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&quot;./blog&quot;&gt;back&lt;/a&gt;&lt;/p&gt;</content><author><name>Saleem Ahmed</name><email>sahmed9@buffalo.edu</email></author><category term="hw cvip vision image-processing blob-detector deep-learning matlab" /><summary type="html">The goal of the assignment is to implement a Laplacian blob detector: a generalized Laplacian of Gaussian (LoG) (gLoG) filter for detecting general elliptical blob structures in images. The gLoG filter can not only accurately locate the blob centers but also estimate the scales, shapes, and orientations of the detected blobs. These functions can be realized by generalizing the common 3-D LoG scale-space blob detector to a 5-D gLoG scale-space one, where the five parameters are image-domain coordinates (x, y), scales (σ x , σ y ), and orientation (θ), respectively.</summary></entry></feed>
